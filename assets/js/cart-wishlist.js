@@ -4,8 +4,8 @@
   // CURRENCY
   var KGZ = 77;
   var USD = 1;
-  var usdIcon = ' $';
-  var kgzIcon = ' <span style="text-decoration: underline">c</span>';
+  var usdIconString = ' $';
+  var kgzIconString = ' <span style="text-decoration: underline">c</span>';
 
   var currency = "";
 
@@ -72,10 +72,10 @@
 
         if (currency === "KGZ" && price ){
           $innerPrice.html(price * KGZ);
-          $innerPriceIcon.html(kgzIcon);
+          $innerPriceIcon.html(kgzIconString);
         } else if (currency === "USD" && price){
           $innerPrice.html(price * USD);
-          $innerPriceIcon.html(usdIcon);
+          $innerPriceIcon.html(usdIconString);
         }
       });
     }
@@ -91,10 +91,10 @@
 
         if (currency === "KGZ" && price ){
           $innerPrice.html(price * KGZ);
-          $innerPriceIcon.html(kgzIcon);
+          $innerPriceIcon.html(kgzIconString);
         } else if (currency === "USD" && price){
           $innerPrice.html(price * USD);
-          $innerPriceIcon.html(usdIcon);
+          $innerPriceIcon.html(usdIconString);
         }
       });
     }
@@ -103,7 +103,7 @@
 
   // CART
   var productColors = ["orange", "yellow", "black"];
-  var productSizes = [];
+  var productSizes = ['sm', 'lg', 'xl'];
   var productAmount = 1;
 
   var cart = {};
@@ -167,7 +167,7 @@
         if (addProductToCart(prod, dataId)){
           productElement.hasClass("single-product-item") ?
               productElement.find(".to-cart-btn-text").html("Добавлено") :
-              productElement.find(".to-cart-btn").html("Добавлено")
+              productElement.find(".to-cart-btn").html("Добавлено");
               borderIfColorsSelected();
         } else {
           productElement.hasClass("single-product-item") ?
@@ -218,7 +218,7 @@
     for (var key in products) {
       productPrice =
           currency == "KGZ"
-              ? (products[key].price * KGZ).toString() + kgzIcon : (products[key].price * USD).toString() + usdIcon;
+              ? (products[key].price * KGZ).toString() + kgzIconString : (products[key].price * USD).toString() + usdIconString;
 
       out += '<tr class="cart-product" data-id="' + key + '">';
       out +=
@@ -231,6 +231,14 @@
           '<td class="pro-price"><span class="amount">' +
           productPrice +
           "</span></td>";
+      out +=
+          '<td class="pro-size"><span>' + products[key].colors.map(function (color) {
+              return ' ' + color;
+          }) + '</span></td>';
+      out +=
+          '<td class="pro-size"><span>' + products[key].size.map(function (size) {
+            return ' ' + size;
+          }) + '</span></td>';
       out +=
           '<td class="pro-quantity"><div class="pro-qty cart-pro-qty"><input type="text" value="' +
           products[key].amount +
@@ -461,7 +469,7 @@
 
   // Function for rendering products to wishList.html
   var renderProductsInWishlist = function () {
-    if (!$("wishlist-container")) {
+    if (!$("wishlist-container")[0]) {
       return;
     }
 
@@ -471,8 +479,8 @@
     for (var key in wishList) {
       productPrice =
           currency === "KGZ"
-              ? (wishList[key].price * KGZ).toString() + kgzIcon
-              : (wishList[key].price * USD).toString() + usdIcon;
+              ? (wishList[key].price * KGZ).toString() + kgzIconString
+              : (wishList[key].price * USD).toString() + usdIconString;
 
       productStatus = ifProductExistInCart(key) ? "Добавлено" : "В корзину";
 
@@ -489,6 +497,14 @@
           '<td class="pro-price"><span class="amount"><span class="inner-price">' +
           productPrice +
           "</span>";
+      out +=
+          '<td class="pro-size"><span>' + wishList[key].colors.map(function (color) {
+            return ' ' + color;
+          }) + '</span></td>';
+      out +=
+          '<td class="pro-size"><span>' + wishList[key].size.map(function (size) {
+            return ' ' + size;
+          }) + '</span></td>';
       out +=
           '<td class="pro-quantity"><div class="pro-qty wishlist-pro-qty"><input type="text" value="' +
           wishList[key].amount +
@@ -620,10 +636,10 @@
 
     if (currency === "KGZ") {
       totalPrice *= KGZ;
-      return totalPrice.toString() + kgzIcon;
+      return totalPrice.toString() + kgzIconString;
     } else {
       totalPrice *= USD;
-      return totalPrice.toString() + usdIcon;
+      return totalPrice.toString() + usdIconString;
     }
   };
 
@@ -642,10 +658,10 @@
 
     if (currency === "KGZ") {
       totalPrice *= KGZ;
-      return totalPrice.toString() + kgzIcon;
+      return totalPrice.toString() + kgzIconString;
     } else {
       totalPrice *= USD;
-      return totalPrice.toString() + usdIcon;
+      return totalPrice.toString() + usdIconString;
     }
   };
 
