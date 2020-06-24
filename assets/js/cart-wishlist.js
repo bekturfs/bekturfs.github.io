@@ -469,7 +469,7 @@
 
   // Function for rendering products to wishList.html
   var renderProductsInWishlist = function () {
-    if (!$("wishlist-container")[0]) {
+    if (!$(".wishlist-container")[0]) {
       return;
     }
 
