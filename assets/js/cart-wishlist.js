@@ -112,6 +112,11 @@
     cart = prod ? Object.assign(cart, prod) : cart;
     sessionStorage.setItem("cart", JSON.stringify(cart));
     renderHeaderMiniCart();
+
+    if (prod && ifProductExistInWishlist(Object.keys(prod)[0])) {
+      wishList = Object.assign(wishList, prod);
+      setWishlist();
+    }
   };
 
   // This function called when user open any page
@@ -379,6 +384,7 @@
   // WISHLIST
 
   var wishList = {};
+  
 
   var setWishlist = function (prod) {
     wishList = prod ? Object.assign(wishList, prod) : wishList;
@@ -413,9 +419,11 @@
     for (var key in wishList) {
       var selector = "[data-id=" + key.toString() + "]";
 
+      console.log('loadwishlist')
+
       $(selector).hasClass("single-product-item") ?
           $(selector).find(".to-wishlist-btn").css({"background-color" : "#63D1B5"}) :
-          $(selector).find(".to-wihslist-btn").html("Добавлено")
+          $(selector).find(".to-wishlist-btn").html("Добавлено")
     }
   };
 
@@ -553,6 +561,8 @@
         name: wishList[dataId].name,
         img: wishList[dataId].img,
         price: wishList[dataId].price,
+        colors: wishList[dataId].colors,
+        size: wishList[dataId].size,
         amount: newVal
       });
 
@@ -574,6 +584,8 @@
         name: wishList[dataId].name,
         img: wishList[dataId].img,
         price: wishList[dataId].price,
+        colors: wishList[dataId].colors,
+        size: wishList[dataId].size,
         amount: newVal
       });
 
@@ -677,8 +689,10 @@
 
   var borderIfColorsSelected = function () {
     var singleProductId = $(".single-product-item").attr("data-id");
+    console.log(cart);
 
     if (cart.hasOwnProperty(singleProductId)){
+      console.log('exist in cart');
       productColors = cart[singleProductId].colors;
 
       if (productColors.includes("orange")){
