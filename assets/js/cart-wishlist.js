@@ -388,7 +388,7 @@
 
   var setWishlist = function (prod) {
     wishList = prod ? Object.assign(wishList, prod) : wishList;
-    $.cookie("wishlist", JSON.stringify(wishList), { path: "/" });
+    $.cookie("wishlist", JSON.stringify(wishList), { path: "/", expires: 7 });
 
     if (prod && ifProductExistInCart(Object.keys(prod)[0])) {
       cart = Object.assign(cart, prod);
@@ -461,7 +461,7 @@
             productElement.find(".to-wishlist-btn").html("В избранное")
       }
 
-      $.cookie("wishlist", JSON.stringify(wishList), { path: "/" });
+      $.cookie("wishlist", JSON.stringify(wishList), { path: "/", expires: 7 });
       renderHeaderMiniWishList();
     });
   };
