@@ -236,14 +236,14 @@
           '<td class="pro-price"><span class="amount">' +
           productPrice +
           "</span></td>";
-      out +=
-          '<td class="pro-size"><span>' + products[key].colors.map(function (color) {
-              return ' ' + color;
-          }) + '</span></td>';
-      out +=
-          '<td class="pro-size"><span>' + products[key].size.map(function (size) {
-            return ' ' + size;
-          }) + '</span></td>';
+      // out +=
+      //     '<td class="pro-size"><span>' + products[key].colors.map(function (color) {
+      //         return ' ' + color;
+      //     }) + '</span></td>';
+      // out +=
+      //     '<td class="pro-size"><span>' + products[key].size.map(function (size) {
+      //       return ' ' + size;
+      //     }) + '</span></td>';
       out +=
           '<td class="pro-quantity"><div class="pro-qty cart-pro-qty"><input type="text" value="' +
           products[key].amount +
@@ -419,8 +419,6 @@
     for (var key in wishList) {
       var selector = "[data-id=" + key.toString() + "]";
 
-      console.log('loadwishlist')
-
       $(selector).hasClass("single-product-item") ?
           $(selector).find(".to-wishlist-btn").css({"background-color" : "#63D1B5"}) :
           $(selector).find(".to-wishlist-btn").html("Добавлено")
@@ -505,14 +503,14 @@
           '<td class="pro-price"><span class="amount"><span class="inner-price">' +
           productPrice +
           "</span>";
-      out +=
-          '<td class="pro-size"><span>' + wishList[key].colors.map(function (color) {
-            return ' ' + color;
-          }) + '</span></td>';
-      out +=
-          '<td class="pro-size"><span>' + wishList[key].size.map(function (size) {
-            return ' ' + size;
-          }) + '</span></td>';
+      // out +=
+      //     '<td class="pro-color"><span>' + wishList[key].colors.map(function (color) {
+      //       return ' ' + color;
+      //     }) + '</span></td>';
+      // out +=
+      //     '<td class="pro-size"><span>' + wishList[key].size.map(function (size) {
+      //       return ' ' + size;
+      //     }) + '</span></td>';
       out +=
           '<td class="pro-quantity"><div class="pro-qty wishlist-pro-qty"><input type="text" value="' +
           wishList[key].amount +
@@ -689,10 +687,8 @@
 
   var borderIfColorsSelected = function () {
     var singleProductId = $(".single-product-item").attr("data-id");
-    console.log(cart);
 
     if (cart.hasOwnProperty(singleProductId)){
-      console.log('exist in cart');
       productColors = cart[singleProductId].colors;
 
       if (productColors.includes("orange")){
@@ -758,8 +754,6 @@
 
       if (ifProductExistInCart(dataId)){
 
-        console.log(cart[dataId]);
-
         interimProduct = _defineProperty({}, dataId, {
           name: cart[dataId].name,
           img: cart[dataId].img,
@@ -773,7 +767,6 @@
       }
 
       if (ifProductExistInWishlist(dataId)){
-        console.log(wishList[dataId]);
 
         interimProduct = _defineProperty({}, dataId, {
           name: wishList[dataId].name,
