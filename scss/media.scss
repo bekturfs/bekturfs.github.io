@@ -1,0 +1,505 @@
+@media screen and (max-width: 1080px) {
+  .nav-list {
+    margin-right: 55px;
+  }
+
+  .main-logo {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .site-navigation {
+    display: block;
+  }
+
+  .main-logo {
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .credit {
+    .credit__content {
+      margin-left: 25px;
+      margin-right: 25px;
+      padding: 70px 60px;
+    }
+
+    .credit__item {
+      width: 45%;
+    }
+  }
+
+  .bank-offers {
+    padding: 0 20px;
+  }
+
+  .application {
+    padding: 0 25px;
+
+    .application__content {
+      margin: 40px 25px 0;
+    }
+  }
+
+  .agreement {
+    padding: 0 22px;
+  }
+
+  .about {
+    .about__content {
+      padding: 0 25px;
+    }
+  }
+
+  .hiw {
+    padding: 0 40px;
+  }
+
+  .documents {
+    padding: 0 20px;
+  }
+
+  .offer {
+    padding: 0 40px;
+  }
+
+  .contacts {
+    padding: 0 40px;
+  }
+
+  .profile {
+    padding: 0 40px;
+
+    .profile__content {
+      padding: 65px 100px 30px;
+    }
+
+    .profile__passport-content {
+      padding: 30px 40px 40px;
+    }
+  }
+
+  .application-percentage {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .white-container-normal {
+    margin: 40px auto 50px;
+  }
+
+  .white-container-big {
+    margin: 40px auto 50px;
+  }
+
+  .site-navigation {
+    display: flex;
+    position: relative;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .main-logo {
+    width: 89px;
+    margin: 0;
+  }
+
+  .main-header {
+    min-height: 51px;
+  }
+
+  .nav-list {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #000;
+    background: url(../img/main-bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+    z-index: 20;
+    transition: all 0.2s ease-in;
+    border-radius: 20px;
+  }
+
+  .nav-list-active {
+    left: 0;
+  }
+
+  .nav-item {
+    padding-top: 20px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+    margin-left: 0;
+    border-bottom: 0;
+
+    text-align: center;
+
+    a {
+      font-size: 16px;
+      line-height: 19px;
+      color: #4f4f4f;
+    }
+  }
+
+  .nav-item:hover {
+    border-bottom: 0;
+    
+    a {
+      color: green;
+    }
+  }
+
+  .hidden-element {
+    display: block;
+    width: 75px;
+  }
+
+  .bank-offers {
+    margin: 40px auto 0;
+
+    .bank-offers__content {
+      padding: 32px 20px;
+      margin: 30px auto 0;
+    }
+
+    .bank-offers__table {
+      font-size: 12px;
+    }
+
+    .bank-offers__table-col:first-child {
+      padding-left: 10px;
+    }
+
+    .bank-offers__buttons {
+      justify-content: space-around;
+      padding: 0;
+      font-size: 10px;
+    }
+
+    .bank-offers__red-button {
+      margin-right: 4px;
+    }
+  }
+
+  .application {
+    padding: 0;
+  }
+
+  .application__flex-container {
+    display: block;
+  }
+
+  .application__left,
+  .application__right {
+    width: 100%;
+  }
+
+  .application__inputs {
+    width: 100%;
+  }
+
+  .about {
+    .about__content {
+      margin-top: 40px;
+      padding: 0 25px;
+      display: block;
+    }
+
+    .about__title {
+      margin: 0;
+    }
+
+    .about__video .main-video__content {
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .about__form {
+      margin-top: 34px;
+      margin-bottom: 0;
+
+      .about__content {
+        margin-top: 0;
+      }
+    }
+
+    .about__title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .about__input,
+    .about__text-and {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .about__text-and {
+      font-size: 16px;
+    }
+  }
+
+  .hiw {
+    padding: 0 20px;
+
+    .hiw__title {
+      margin-top: 50px;
+    }
+
+    .hiw__dropdown-list {
+      padding: 35px 0px 0;
+    }
+  }
+
+  .info {
+    padding: 0;
+
+    .info__content {
+      padding: 30px 24px;
+    }
+  }
+
+  .flex-space-between {
+    display: block;
+  }
+
+  .contacts {
+    .contacts__map {
+      margin-top: 40px;
+    }
+
+    .contacts__content {
+      padding: 55px 100px;
+    }
+
+    .contacts__website,
+    .contacts__email,
+    .contacts__phone-number-input {
+      margin-left: 0;
+    }
+  }
+
+  .proposal-loading {
+    .proposal-loading__sub-title2 {
+      margin-bottom: 100px;
+    }
+  }
+
+  .proposal-info {
+    padding: 0 25px;
+
+    .proposal-info__sub-title {
+      margin-top: 10px;
+    }
+  }
+
+  .profile {
+    padding: 0 25px;
+
+    .profile__content {
+      padding: 65px 50px 30px;
+    }
+
+    .profile__passport-row {
+      display: block;
+    }
+
+    .profile__passport-col {
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    .profile-edit__icon-button {
+      right: 20px;
+    }
+  }
+
+  .login {
+
+    padding: 0 23px;
+
+    .login__title {
+      margin-top: 40px;
+    }
+
+    .login__container {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 762px) {
+  body {
+    background-position: 0 20px;
+    background-size: 100% 100%;
+  }
+
+  .credit {
+    .credit__content {
+      padding: 25px;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+    .credit__item:nth-child(2),
+    .credit__item:nth-child(4) {
+      margin-left: 0;
+      margin-top: 45px;
+      width: 100%;
+    }
+
+    .credit__item {
+      display: block;
+      width: 100%;
+    }
+
+    .credit__item-sum input {
+      width: 60%;
+    }
+
+    .credit__item-sum select {
+      width: 30%;
+      margin-left: auto;
+    }
+
+    .credit__item-term select {
+      width: 100%;
+    }
+
+    .credit__list .credit__item-quiz select {
+      width: 100%;
+    }
+
+    .credit__list .credit__item-bail {
+      width: 93%;
+    }
+  }
+
+  .credit-button {
+    width: 280px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .application__content {
+    max-width: 870px;
+    margin: 60px auto 0;
+    padding: 60px 20px;
+  }
+
+  .application__title {
+    margin: 40px auto 0;
+    font-size: 24px;
+  }
+
+  .application__sub-title1,
+  .application__sub-title2 {
+    font-size: 18px;
+  }
+
+  .application__sub-title1 {
+    margin: 30px auto 10px;
+  }
+
+  .application .application__sms-button {
+    width: 100%;
+    margin-top: 44px;
+    padding: 18px 50px;
+
+    font-size: 14px;
+  }
+
+  .documents {
+    .documents__content {
+      padding: 30px 25px;
+    }
+  }
+
+  .offer {
+    padding: 0 20px;
+
+    .offer__content {
+      padding: 40px 24px;
+    }
+  }
+
+  .contacts {
+    padding: 0 25px;
+
+    .contacts__content {
+      padding: 55px 40px;
+    }
+
+    .contacts__button {
+      width: 100%;
+    }
+  }
+
+  .proposal {
+    .proposal__list {
+      margin-top: 40px;
+      padding: 0 25px;
+    }
+
+    .proposal__item {
+      margin: 0 auto 30px;
+    }
+
+    .proposal__item:last-child {
+      margin-bottom: 40px;
+    }
+
+    .proposal__link {
+      padding: 16px 50px;
+    }
+  }
+
+  .profile {
+    padding: 0 25px;
+
+    .profile__content {
+      padding: 65px 15px 20px;
+    }
+
+    input::placeholder{
+      font-size: 11px;
+    }
+
+    .profile__col {
+      width: 132px;
+      font-size: 13px;
+      background: none;
+      padding-left: 8px;
+
+      .profile__date-input {
+        font-size: 11px;
+      }
+    }
+
+    .profile__passport-photo-inputs {
+  
+      .photo-label {
+        width: 70%;
+        padding-right: 40px;
+      }
+  
+      .photo-camera-label {
+        width: 30%;
+        background: url(../img/icons/photo-camera-icon.png) 100% 50% no-repeat;
+      }
+    }
+
+  }
+}

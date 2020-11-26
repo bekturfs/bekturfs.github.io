@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <nav class="site-navigation">
+          <div class="hamburger-menu">
+            <div class="bar1"></div>
+            <div class="invis"></div>
+            <div class="bar3"></div>
+          </div>
+          <a href="" class="main-logo">
+            <img src="img/skynance-logo.png" alt="main-log" />
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Как это работает</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Вход/Регистрация</a>
+            </li>
+          </ul>
+          <div class="hidden-element"></div>
+        </nav>
+      </div>
+    </header>
+    <section class="contacts">
+      <div class="main-container">
+        <h1 class="contacts__title application__title">Контакты</h1>
+        <div class="contacts__map">
+          <div class="responsive-map">
+            <div class="map__ration"></div>
+            <div class="map__content">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1BjB-LzIVf1qC1_qNfQz-wAsUf1I&hl=en"
+                width="100%"
+                height="100%"
+              ></iframe>
+            </div>
+          </div>
+          <form action="" class="contacts__form">
+            <div class="contacts__content white-container-big">
+              <div class="contacts__first-half">
+                <div class="flex-space-between">
+                  <div class="contacts__address flex-basis-50">
+                    <b>Address:</b>
+                    <a href="#">
+                      Champ de Mars, 5 Avenue Anatole France, 75007 Paris,
+                      France
+                    </a>
+                  </div>
+                  <div class="contacts__email flex-basis-50">
+                    <b>E-Mail: </b>
+                    <a href="malito:">contact@example.com</a>
+                  </div>
+                </div>
+                <div class="flex-space-between">
+                  <a
+                    href="tel:+996555354354"
+                    class="contacts__phone flex-basis-50"
+                  >
+                    +996 (555) 354 354
+                  </a>
+                  <div class="contacts__website flex-basis-50">
+                    <b>Web: </b>
+                    <a href="">https://www.yourdomain.com</a>
+                  </div>
+                </div>
+                <div class="flex-space-between">
+                  <input
+                    type="text"
+                    class="contacts__fullname-input flex-basis-50"
+                    placeholder="Фио"
+                  />
+                  <input
+                    type="text"
+                    class="contacts__phone-number-input flex-basis-50"
+                    placeholder="Номер телефона"
+                  />
+                </div>
+              </div>
+              <div class="contacts__second-half">
+                  <textarea name="" id="" cols="30" rows="10" class="contacts__textarea"></textarea>
+                  <button class="contacts__button red-btn" type="submit">
+                    Отправить
+                  </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="footer-content">
+          <ul class="footer-content__menu">
+            <li class="footer-content__menu-item">
+              <a href="#">Как это работает</a>
+            </li>
+            <li class="footer-content__menu-item"><a href="#">Партнерам</a></li>
+            <li class="footer-content__menu-item"><a href="#">О нас</a></li>
+          </ul>
+          <a href="" class="footer-content__logo">
+            <img src="img/skynance-logo.png" alt="Skynance Logo" />
+          </a>
+          <ul class="footer-content__contacts">
+            <li class="footer-content__contacts-item">
+              <a href="tel:+996 (555) 354 354">+996 (555) 354 354</a>
+            </li>
+            <li class="footer-content__contacts-item">
+              <a href="tel:+996 (555) 354 354">+996 (555) 354 354</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/header.js"></script>
+  </body>
+</html>

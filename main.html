@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-container">
+        <nav class="site-navigation">
+          <div class="hamburger-menu">
+            <div class="bar1"></div>
+            <div class="invis"></div>
+            <div class="bar3"></div>
+          </div>
+          <a href="" class="main-logo">
+            <img src="img/skynance-logo.png" alt="main-log" />
+          </a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Как это работает</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Вход/Регистрация</a>
+            </li>
+          </ul>
+          <div class="hidden-element"></div>
+        </nav>
+      </div>
+    </header>
+    <section class="credit">
+      <div class="main-container">
+        <h1 class="credit__title">На какой кредит расчитываете</h1>
+        <div class="credit__content">
+          <form action="" class="credit__form" id="credit-form">
+            <fieldset>
+              <ul class="credit__list">
+                <li class="credit__item credit__item-sum">
+                  <label for="sum-input"> Сумма желаемого кредита </label>
+                  <div class="credit__inputs">
+                    <input id="sum-input" type="number" placeholder="сумма" />
+                    <select name="" id="sum-select">
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="credit__item credit__item-quiz">
+                  <label> На что хотите взять </label>
+                  <select name="" id="quiz-select">
+                    <option value="lorem">lorem</option>
+                    <option value="lorem">lorem</option>
+                    <option value="lorem">lorem</option>
+                  </select>
+                </li>
+                <li class="credit__item credit__item-term">
+                  <label for="term-input"> Срок кредита </label>
+                  <div class="credit__inputs">
+                    <!-- <input id="term-input" type="number" placeholder="3" /> -->
+                    <select name="" id="term-select">
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="credit__item credit__item-bail">
+                  <label for="bail-input"> С залогом или без </label>
+                  <div class="credit__toggle-ios">
+                    <label class="toggle-control">
+                      <input id="ios-toggle" type="checkbox" />
+                      <span class="control"></span>
+                    </label>
+                  </div>
+                  <input
+                    type="text"
+                    id="bail-input"
+                    class="display-none"
+                    placeholder="Недвижимость, машина и т.д"
+                  />
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </section>
+    <button type="submit" class="credit-button" form="credit-form">
+      Посмотреть предложения Банков
+    </button>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="footer-content">
+          <ul class="footer-content__menu">
+            <li class="footer-content__menu-item">
+              <a href="#">Как это работает</a>
+            </li>
+            <li class="footer-content__menu-item"><a href="#">Партнерам</a></li>
+            <li class="footer-content__menu-item"><a href="#">О нас</a></li>
+          </ul>
+          <a href="" class="footer-content__logo">
+            <img src="img/skynance-logo.png" alt="Skynance Logo" />
+          </a>
+          <ul class="footer-content__contacts">
+            <li class="footer-content__contacts-item">
+              <a href="tel:+996 (555) 354 354">+996 (555) 354 354</a>
+            </li>
+            <li class="footer-content__contacts-item">
+              <a href="tel:+996 (555) 354 354">+996 (555) 354 354</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/header.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
