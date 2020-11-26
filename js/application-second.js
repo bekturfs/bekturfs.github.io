@@ -41,8 +41,6 @@ function countPersentage() {
 
     var inputs = document.querySelectorAll('.application__text-input');
 
-    console.log(totalInputsCount)
-
     // Get the number of the found inputs.
     var totalInputs = inputs.length;
 
@@ -62,8 +60,6 @@ function renderPercentage() {
 
     var percent = (filledInputsCount / totalInputsCount) * 100;
 
-    console.log('percent: ', percent)
-
     var finalPercent = Math.round(startPercent + ( 60 / 100 ) * percent);
 
     if (finalPercent > 99){
@@ -72,9 +68,6 @@ function renderPercentage() {
         $('.application__filled-out-text').text('');
     }
 
-    console.log('finalPercent: ', finalPercent, 60/100)
-
-    console.log("filledInputsCount: ", filledInputsCount)
     $('.application-percentage .line .filled-line').css('width', finalPercent  + '%' );
     $('.application-percentage .line .percent-indicator').css('left', finalPercent - 2 + '%' );
     $('.application-percentage .line .percent-indicator').text(finalPercent + '%');
