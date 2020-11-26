@@ -77,7 +77,6 @@
       var total = inputsCount + checkboxCount;
       var filledTotal = filledInputsCount + checkedInputsCount;
 
-      console.log("percent: ", percent, filledTotal)
       $('.application-percentage .line .filled-line').css('width', (filledTotal + 1) * 2 + '%' );
       $('.application-percentage .line .percent-indicator').css('left', filledTotal * 2 + '%' );
       $('.application-percentage .line .percent-indicator').text((filledTotal * 2) + 2 + '%');
