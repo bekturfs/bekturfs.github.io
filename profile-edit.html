@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header main-header-authenticated">
       <div class="header-container">
         <nav class="site-navigation">
           <div class="hamburger-menu">
@@ -20,13 +20,17 @@
             <img src="img/skynance-logo.png" alt="main-log" />
           </a>
           <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Как это работает</a>
+            <li class="nav-item nav-item-profile-photo">
+              <img src="img/profile-photo.png" alt="" srcset="">
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Вход/Регистрация</a>
+            <!-- add link-active class for current page -->
+            <li class="nav-item link-active">
+              <a class="nav-link" href="#">Мой профиль</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Мои заявки</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Служба поддержки</a></li>
+            <li class="nav-item nav-item-btn">
+              <a class="nav-link" href="#">Выйти</a>
             </li>
           </ul>
           <div class="hidden-element"></div>
