@@ -563,9 +563,11 @@
   .profile input::placeholder {
     font-size: 11px;
   }
+  .profile .profile__row {
+    display: block;
+  }
   .profile .profile__col {
-    width: 132px;
-    font-size: 13px;
+    width: 100%;
     background: none;
     padding-left: 8px;
   }
