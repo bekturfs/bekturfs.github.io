@@ -2134,4 +2134,12 @@ body {
   letter-spacing: 0.02em;
   color: #333333;
 }
+
+.red-input-border {
+  border-bottom: 1.5px solid red !important;
+}
+
+.red-input-border-radius {
+  border: 1.5px solid red !important;
+}
 /*# sourceMappingURL=style.css.map */

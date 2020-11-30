@@ -2139,3 +2139,14 @@ $toggle-control-size: 16px;
     color: #333333;
   }
 }
+
+
+// Red border for showing errors
+
+.red-input-border {
+  border-bottom: 1.5px solid red!important;
+}
+
+.red-input-border-radius {
+  border: 1.5px solid red!important;
+}

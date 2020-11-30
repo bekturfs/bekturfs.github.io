@@ -28,7 +28,9 @@
               <a class="nav-link" href="#">Как это работает</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-            <li class="nav-item nav-item-documents"><a class="nav-link" href="#">Документы</a></li>
+            <li class="nav-item nav-item-documents">
+              <a class="nav-link" href="#">Документы</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Вход/Регистрация</a>
@@ -44,12 +46,13 @@
         <h2 class="application__sub-title1">1 Шаг</h2>
         <h2 class="application__sub-title2">Обязательная информация</h2>
         <div class="application__content">
-          <div
-            class="application__flex-container"
-            id="application-first-form"
-          >
+          <div class="application__flex-container" id="application-first-form">
             <div class="application__left">
-              <input type="text" class="application__inputs application__text-input application__input" placeholder="Фио" />
+              <input
+                type="text"
+                class="application__inputs application__text-input application__input"
+                placeholder="Фио"
+              />
               <div class="application__date application__inputs">
                 <label for="birth-input">Дата рождения</label>
                 <input value="1991-01-01" type="date" id="birth-input" />
@@ -87,7 +90,11 @@
                 <label for="issues-date-input">Дата выдачи</label>
                 <input value="1991-01-01" type="date" id="issues-date-input" />
               </div>
-              <input type="text" class="application__inputs application__text-input" placeholder="ИНН" />
+              <input
+                type="text"
+                class="application__inputs application__text-input"
+                placeholder="ИНН"
+              />
               <div class="application__photo application__inputs">
                 <label class="photo-label"
                   >Добавить фото лица
@@ -144,7 +151,6 @@
                   <input
                     class="application__radio"
                     type="radio"
-                    checked="checked"
                     name="marital-status-radio"
                   />
                   <span class="checkmark"></span>
@@ -160,7 +166,9 @@
                 class="application__inputs application__text-input application__input"
                 placeholder="Телефон"
               />
-              <button class="application__sms-button">Получить СМС - код</button>
+              <button class="application__sms-button">
+                Получить СМС - код
+              </button>
               <input
                 type="text"
                 class="application__inputs2 application__sms-confirm-input application__text-input application__input"
@@ -180,54 +188,95 @@
         <div class="main-container">
           <ul class="agreement__list">
             <li class="agreement__item">
-              <input id="agreement-input-1" type="checkbox" class="application__input application__checkbox-input"/>
-              <label for="agreement-input-1"> Я согласен и принимаю все условия </label>
+              <input
+                id="agreement-input-1"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
+              <label for="agreement-input-1">
+                Я согласен и принимаю все условия
+              </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-2" type="checkbox" class="application__input application__checkbox-input"/>
-              <label for="agreement-input-2"> Я согласен и принимаю Оферту на заключение договора </label>
+              <input
+                id="agreement-input-2"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
+              <label for="agreement-input-2">
+                Я согласен и принимаю Оферту на заключение договора
+              </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-3" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-3"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-3">
                 Я согласен на сбор и обработку моих персональных данных
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-4" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-4"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-4">
                 Я согласен на предоставление кредитного отчета для определения
                 моей кредитоспособности
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-5" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-5"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-5">
-                Я согласен на передачу моей кредитной информации в кредитное бюро
+                Я согласен на передачу моей кредитной информации в кредитное
+                бюро
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-6" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-6"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-6">
                 Я согласен на передачу моей кредитной информации третьим лицам
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-7" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-7"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-7">
-                Я согласен и принимаю Правила предоставления и обслуживания услуг
-                в удаленном режиме («онлайн»)
+                Я согласен и принимаю Правила предоставления и обслуживания
+                услуг в удаленном режиме («онлайн»)
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-8" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-8"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-8">
                 Я принимаю условия Политики в отношении обработки персональных
                 данных
               </label>
             </li>
             <li class="agreement__item">
-              <input id="agreement-input-9" type="checkbox" class="application__input application__checkbox-input"/>
+              <input
+                id="agreement-input-9"
+                type="checkbox"
+                class="application__input application__checkbox-input"
+              />
               <label for="agreement-input-9">
                 Я ознакомлен с Соглашением об использовании электронной подписи
               </label>
@@ -248,11 +297,8 @@
     </form>
     <section class="application-percentage">
       <div class="line">
-        <div class="filled-line">
-        </div>
-        <div class="percent-indicator">
-          0%
-        </div>
+        <div class="filled-line"></div>
+        <div class="percent-indicator">0%</div>
       </div>
     </section>
     <footer class="main-footer">
