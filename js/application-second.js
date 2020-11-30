@@ -1,4 +1,5 @@
-var totalInputsCount = 26;
+(function(){
+    var totalInputsCount = 26;
 var filledInputsCount = 0;
 
 $('#application-salary').on('click', function(){
@@ -72,3 +73,61 @@ function renderPercentage() {
     $('.application-percentage .line .percent-indicator').css('left', finalPercent - 2 + '%' );
     $('.application-percentage .line .percent-indicator').text(finalPercent + '%');
 }
+
+var rent = 0;
+var purchaseOfGoods = 0;
+var salaryOfPersonal = 0;
+var comServices = 0;
+
+function getTotalSum(){
+    return rent + purchaseOfGoods + salaryOfPersonal + comServices;
+}
+
+function renderTotalSum(){
+    var totalSum = getTotalSum();
+    $('#total-sum').text(totalSum);
+}
+
+renderTotalSum();
+
+$('#application__rent').on('input', function(){
+    var inFloat = parseFloat(this.value);
+    if (inFloat > 0){
+        rent = inFloat;
+    } else {
+        rent = 0;
+    }
+    renderTotalSum();
+})
+
+$('#application__purchase-of-goods').on('input', function(){
+    var inFloat = parseFloat(this.value);
+    if (inFloat > 0){
+        purchaseOfGoods = inFloat;
+    } else {
+        purchaseOfGoods = 0;
+    }
+    renderTotalSum();
+})
+
+$('#application__salary-of-personal').on('input', function(){
+    var inFloat = parseFloat(this.value);
+    if (inFloat > 0){
+        salaryOfPersonal = inFloat;
+    } else {
+        salaryOfPersonal = 0;
+    }
+    renderTotalSum();
+})
+
+$('#application__com-services').on('input', function(){
+    var inFloat = parseFloat(this.value);
+    if (inFloat > 0){
+        comServices = inFloat;
+    } else {
+        comServices = 0; 
+    }
+    renderTotalSum();
+})
+
+}())

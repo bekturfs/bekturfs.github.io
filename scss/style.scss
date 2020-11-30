@@ -23,6 +23,10 @@ a {
   text-decoration: none;
 }
 
+.kyrgyz-som {
+  border-bottom: 1px solid #828282;
+}
+
 button {
   display: block;
   border: 0;
@@ -736,6 +740,10 @@ $toggle-control-size: 16px;
   border-bottom: 1px solid#E0E0E0 !important;
 }
 
+.application__costs {
+  margin-left: 20px;
+}
+
 .application__sms-confirm-input {
   margin-top: 30px;
 }
@@ -787,6 +795,10 @@ $toggle-control-size: 16px;
     cursor: pointer;
     flex-basis: 15%;
     background: url(../img/icons/photo-camera-icon.png) 100% 50% no-repeat;
+  }
+
+  .photo-label-document {
+    font-size: 13.5px!important;
   }
 }
 

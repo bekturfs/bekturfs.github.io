@@ -130,28 +130,32 @@
                     class="application__inputs application__text-input"
                     placeholder="Месячный доход"
                   />
-                  <div class="dropdown-name dropdown-name-consumption">
-                    Расходы за месяц
+                  <div class="dropdown-name dropdown-name-consumption">Расходы за месяц - 
+                    <span id="total-sum"></span> <span class="kyrgyz-som">c</span>
                   </div>
                   <input
-                    type="text"
-                    class="application__inputs application__text-input"
+                    type="number"
+                    class="application__inputs application__text-input application__costs"
                     placeholder="Аренда"
+                    id="application__rent"
                   />
                   <input
-                    type="text"
-                    class="application__inputs application__text-input"
+                    type="number"
+                    class="application__inputs application__text-input application__costs"
                     placeholder="Покупка товара / услуги"
+                    id="application__purchase-of-goods"
                   />
                   <input
-                    type="text"
-                    class="application__inputs application__text-input"
+                    type="number"
+                    class="application__inputs application__text-input application__costs"
                     placeholder="Заработная плата персонала"
+                    id="application__salary-of-personal"
                   />
                   <input
-                    type="text"
-                    class="application__inputs application__text-input"
+                    type="number"
+                    class="application__inputs application__text-input application__costs"
                     placeholder="Ком.услуги"
+                    id="application__com-services"
                   />
                   <div class="application__photo application__inputs">
                     <label class="photo-label"
@@ -168,9 +172,9 @@
                     </label>
                   </div>
                   <input
-                    type="text"
+                    type="number"
                     class="application__inputs application__text-input"
-                    placeholder="Какую сумму вы можете оплачивать в месяц"
+                    placeholder="Какую сумму вы можете оплачивать в месяц (в сомах)"
                   />
                 </div>
               </div>
@@ -188,7 +192,7 @@
               <div class="application__dropdown">
                 <div class="dropdown-name">
                   <label class="container"
-                    >Недвижимое(дом,квартира,земля)
+                    >Недвижимое (дом, квартира, земля)
                     <input
                       type="checkbox"
                       checked="checked"
@@ -214,9 +218,9 @@
                     placeholder="Адрес имущества"
                   />
                   <input
-                    type="text"
+                    type="number"
                     class="application__inputs application__text-input"
-                    placeholder="Рыночная стоимость"
+                    placeholder="Рыночная стоимость (в сомах)"
                   />
                 </div>
               </div>
@@ -225,7 +229,7 @@
               <div class="application__dropdown">
                 <div class="dropdown-name">
                   <label class="container"
-                    >Движимое(машина,оборудование, товар, бизнес)
+                    >Движимое (машина, оборудование, товар, бизнес)
                     <input
                       type="checkbox"
                       checked="checked"
@@ -246,17 +250,17 @@
                     placeholder="Владелец имущества"
                   />
                   <input
-                    type="text"
+                    type="number"
                     class="application__inputs application__text-input"
-                    placeholder="Рыночная стоимость"
+                    placeholder="Рыночная стоимость (в сомах)"
                   />
                   <input
-                    type="text"
+                    type="number"
                     class="application__inputs application__text-input"
-                    placeholder="Месячный доход"
+                    placeholder="Месячный доход (в сомах)"
                   />
                   <div class="application__photo application__inputs">
-                    <label class="photo-label"
+                    <label class="photo-label photo-label-document"
                       >Прикрепи/сфотай документ
                       <input type="file" class="photo-input" />
                     </label>
@@ -304,9 +308,9 @@
                 placeholder="Вид деятельности"
               />
               <input
-                type="text"
+                type="number"
                 class="application__inputs application__text-input"
-                placeholder="Выручка/зарплата"
+                placeholder="Выручка/зарплата (в сомах)"
               />
             </div>
           </div>

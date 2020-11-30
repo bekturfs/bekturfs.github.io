@@ -31,7 +31,7 @@
         }
     });
 
-    var inputsCount = 10;
+    var inputsCount = 9;
     var checkboxCount = 9;
     var filledInputsCount = 0;
     var checkedInputsCount = 0;
@@ -48,8 +48,6 @@
       var checkboxInputs = document.querySelectorAll('.application__checkbox-input');
 
 
-      // console.log(checkboxInputs)
-
       // Get the number of the found inputs.
       var totalInputs = inputs.length;
       var totalCheckboxInputs = checkboxInputs.length;
@@ -62,6 +60,19 @@
       }   
               
       var checkboxInputsWithValue = 0;
+
+      if (this.id === 'agreement-input-1'){
+        if (this.checked) {
+          $('.application__checkbox-input').each(function(){
+            this.checked = true;
+          })
+        } else if (!this.checked) {
+          $('.application__checkbox-input').each(function(){
+            this.checked = false;
+          })
+        }
+      }
+
       for(var j=0; j<totalCheckboxInputs; j++){
         if(checkboxInputs[j].checked)
           checkboxInputsWithValue += 1;
@@ -77,9 +88,9 @@
       var total = inputsCount + checkboxCount;
       var filledTotal = filledInputsCount + checkedInputsCount;
 
-      $('.application-percentage .line .filled-line').css('width', (filledTotal + 1) * 2 + '%' );
+      $('.application-percentage .line .filled-line').css('width', (filledTotal + 2) * 2 + '%' );
       $('.application-percentage .line .percent-indicator').css('left', filledTotal * 2 + '%' );
-      $('.application-percentage .line .percent-indicator').text((filledTotal * 2) + 2 + '%');
+      $('.application-percentage .line .percent-indicator').text((filledTotal + 2) * 2 + '%');
     }
 
 })()
