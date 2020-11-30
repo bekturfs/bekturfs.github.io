@@ -42,13 +42,12 @@ button {
   z-index: -1 !important;
 }
 
-.red-btn {
+.red-btn, .blue-btn {
   display: block;
   width: 280px;
   margin: 30px auto 50px;
   padding: 12px 0;
 
-  background: #ff4343;
   border-radius: 20px;
   text-align: center;
   color: #ffffff;
@@ -60,8 +59,20 @@ button {
   cursor: pointer;
 }
 
-.red-btn:hover {
+.red-btn {
+  background: #ff4343;
+}
+
+.red-btn:hover, .red-btn:focus {
   background: #c41e1e;
+}
+
+.blue-btn {
+  background: #417A8A;
+}
+
+.blue-btn:hover, .blue-btn:focus {
+  background: #055972;
 }
 
 .display-none {
@@ -115,6 +126,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  background-color: #BCD1C2;
   background: url(../img/main-bg.jpg);
   background-repeat: no-repeat;
   background-position: 0 20px;
@@ -1838,6 +1850,8 @@ $toggle-control-size: 16px;
   }
 
   input:focus {
+    color: rgb(32, 32, 32);
+    font-weight: 500;
     outline: 0;
     border-bottom: 1px solid rgba(0, 123, 255, 0.5);
   }
@@ -1860,10 +1874,18 @@ $toggle-control-size: 16px;
     }
   }
 
-  .login-btn {
-    width: 180px;
-    margin: 60px auto 90px;
+  .login__buttons {
+    margin: 0 auto;
+    width: 405px;
+    display: flex;
+    justify-content: space-between;
   }
+
+  .login-btn {
+    width: 172px;
+    margin: 60px 0 90px;
+  }
+
 }
 
 // chosen-bank.html
