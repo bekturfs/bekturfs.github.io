@@ -134,7 +134,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 400;
-  background: #BCD1C2 url(../img/main-bg.jpg);
+  background: #BCD1C2, url(../img/main-bg.jpg);
   background-repeat: no-repeat;
   background-position: 0 20px;
   background-size: 100% 100%;
