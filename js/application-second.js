@@ -18,15 +18,33 @@ $('#application-movable').on('click', function(){
     showHideContent(this, 4)
 })
 
-function showHideContent(context, inputsCount){
-    if (!$(context).is(':checked')){
-        $(context).closest('.application__dropdown')
-        .find('.dropdown-content').css('display', 'none');
-        totalInputsCount -= inputsCount;
+function requiredInputs(context, flag) {
+
+    var inputs = $(context).find('input');
+
+    if (flag){
+        inputs.each(function(){
+            $(this).prop('required', 'true')
+        })
     } else {
-        $(context).closest('.application__dropdown')
-        .find('.dropdown-content').css('display', 'block');
+        inputs.each(function(){
+            $(this).removeAttr('required')
+        })
+    }
+}
+
+function showHideContent(context, inputsCount){
+
+    var dropdownContent = $(context).closest('.application__dropdown').find('.dropdown-content');
+
+    if ($(context).is(':checked')){
+        dropdownContent.css('display', 'block');
+        requiredInputs(dropdownContent, true);
         totalInputsCount += inputsCount;
+    } else {
+        dropdownContent.css('display', 'none');
+        requiredInputs(dropdownContent, false);
+        totalInputsCount -= inputsCount;
     }
 }
 

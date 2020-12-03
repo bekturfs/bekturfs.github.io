@@ -783,7 +783,7 @@ body {
 }
 
 .application__inputs:required:valid {
-  border-bottom: 1px solid #e0e0e0 !important;
+  border-bottom: 1px solid green !important;
 }
 
 .photo-input:focus:required:invalid + label {
