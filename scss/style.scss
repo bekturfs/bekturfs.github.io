@@ -137,9 +137,11 @@ body {
   background-size: 100% 100%;
 }
 
+.proposal-info-body,
 .proposal-info-body {
   background-size: cover;
 }
+
 
 .main-container {
   max-width: 870px;
@@ -307,221 +309,227 @@ body {
 
 /* credit */
 
-.credit option {
-  color: #000;
-}
+.credit {
+  option {
+    color: #000;
+  }
+  
+  .credit__title {
+    width: 298.43px;
+    margin: 90px auto 0;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    color: #417a8a;
+  }
+  
+  .credit__content {
+    max-width: 870px;
+  
+    margin-top: 70px;
+    padding: 70px 100px;
+  
+    background: #f5fffa;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+  }
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .credit__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .credit__item {
+    width: 45%;
+    display: block;
+    position: relative;
+  }
+  
+  .credit__item select {
+    padding-left: 10px !important;
+  }
+  
+  .credit__inputs {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .credit__item input {
+    display: block;
+    width: 65%;
+    background-color: inherit;
+    margin-top: 5px;
+    padding: 10px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: #e0e0e0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9da7a1;
+  }
 
-.credit .credit__title {
-  width: 298.43px;
-  margin: 90px auto 0;
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 42px;
-  text-align: center;
-  color: #417a8a;
-}
-
-.credit .credit__content {
-  max-width: 870px;
-
-  margin-top: 70px;
-  padding: 70px 100px;
-
-  background: #f5fffa;
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 25px;
-}
-
-.credit fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.credit .credit__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.credit .credit__item {
-  width: 45%;
-  display: block;
-  position: relative;
-}
-
-.credit .credit__item select {
-  padding-left: 10px !important;
-}
-
-.credit .credit__inputs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.credit .credit__item input {
-  display: block;
-  width: 65%;
-  background-color: inherit;
-  margin-top: 5px;
-  padding: 10px;
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: #e0e0e0;
-  font-size: 16px;
-  font-weight: 400;
-  color: #9da7a1;
-}
-
-.credit .credit__item input:focus {
-  border-color: green;
-}
-
-.credit .credit__item label {
-  display: block;
-  padding-left: 40px;
-}
-
-/* credit sum */
-
-.credit .credit__item-sum label {
-  background: url(../img/icons/sum-icon.png) 0 0px no-repeat;
-}
-
-.credit select {
-  background: inherit;
-  background: url(../img/icons/select-icon.png) 99% 30% no-repeat;
-  font-size: 16px;
-  appearance: none;
-  font-weight: 400;
-  color: #9da7a1;
-  padding-bottom: 11px;
-  border: 0px;
-  border-bottom: 2px solid #e0e0e0;
-  outline: 0px;
-}
-
-.credit .credit__item-sum .credit__inputs {
-  padding: 5px 0;
-}
-
-.credit .credit__item-sum select {
-  width: 25%;
-  // margin-left: 33px;
-}
-
-/* credit quiz */
-
-.credit .credit__item-quiz select {
-  width: 100%;
-  padding: 15px 0;
-}
-
-.credit .credit__item-quiz label {
-  background: url(../img/icons/quiz-icon.png) 0 0 no-repeat;
-}
-
-/* credit term */
-
-.credit .credit__item-term {
-  margin-top: 50px;
-}
-
-.credit .credit__item-term select {
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-  padding: 10px 0;
-}
-
-.credit .credit__item-term label {
-  background: url(../img/icons/calendar-icon.png) 0 0px no-repeat;
-}
-
-/* credit bail */
-
-.credit .credit__item-bail {
-  margin-top: 50px;
-  position: relative;
-}
-
-.credit .credit__item-bail label:first-child {
-  background: url(../img/icons/property-icon.png) 0 0px no-repeat;
-}
-
-.credit .credit__item-bail input {
-  width: 100%;
-}
-
-// credit bail toggle ios
-
-.credit .credit__toggle-ios {
-  position: absolute;
-  top: 5px;
-  left: 200px;
-}
-
-// Tweak these to change the style of the toggle
-$toggle-background-color-on: dodgerblue;
-$toggle-background-color-off: darkgray;
-$toggle-control-color: #333;
-$toggle-width: 33px;
-$toggle-height: 14px;
-$toggle-gutter: 5px;
-$toggle-radius: 50%;
-$toggle-control-speed: 0.15s;
-$toggle-control-ease: ease-in;
-
-// These are our computed variables
-// change at your own risk.
-$toggle-radius: $toggle-height / 2;
-$toggle-control-size: 16px;
-
-.toggle-control {
-  display: block;
-  position: relative;
-  padding-left: $toggle-width;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  user-select: none;
-
-  input {
+  .credit__item input:focus:required:invalid {
+    border-color: red;
+  }
+  
+  .credit__item input:required:valid {
+    border-color: green;
+  }
+  
+  .credit__item label {
+    display: block;
+    padding-left: 40px;
+  }
+  
+  /* credit sum */
+  
+  .credit__item-sum label {
+    background: url(../img/icons/sum-icon.png) 0 0px no-repeat;
+  }
+  
+  select {
+    background: inherit;
+    background: url(../img/icons/select-icon.png) 99% 30% no-repeat;
+    font-size: 16px;
+    appearance: none;
+    font-weight: 400;
+    color: #9da7a1;
+    padding-bottom: 11px;
+    border: 0px;
+    border-bottom: 2px solid #e0e0e0;
+    outline: 0px;
+  }
+  
+  .credit__item-sum .credit__inputs {
+    padding: 5px 0;
+  }
+  
+  .credit__item-sum select {
+    width: 25%;
+    // margin-left: 33px;
+  }
+  
+  /* credit quiz */
+  
+  .credit__item-quiz select {
+    width: 100%;
+    padding: 15px 0;
+  }
+  
+  .credit__item-quiz label {
+    background: url(../img/icons/quiz-icon.png) 0 0 no-repeat;
+  }
+  
+  /* credit term */
+  
+  .credit__item-term {
+    margin-top: 50px;
+  }
+  
+  .credit__item-term select {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 0;
+  }
+  
+  .credit__item-term label {
+    background: url(../img/icons/calendar-icon.png) 0 0px no-repeat;
+  }
+  
+  /* credit bail */
+  
+  .credit__item-bail {
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  .credit__item-bail label:first-child {
+    background: url(../img/icons/property-icon.png) 0 0px no-repeat;
+  }
+  
+  .credit__item-bail input {
+    width: 100%;
+  }
+  
+  // credit bail toggle ios
+  
+  .credit__toggle-ios {
     position: absolute;
-    opacity: 0;
+    top: 5px;
+    left: 200px;
+  }
+  
+  // Tweak these to change the style of the toggle
+  $toggle-background-color-on: dodgerblue;
+  $toggle-background-color-off: darkgray;
+  $toggle-control-color: #333;
+  $toggle-width: 33px;
+  $toggle-height: 14px;
+  $toggle-gutter: 5px;
+  $toggle-radius: 50%;
+  $toggle-control-speed: 0.15s;
+  $toggle-control-ease: ease-in;
+  
+  // These are our computed variables
+  // change at your own risk.
+  $toggle-radius: $toggle-height / 2;
+  $toggle-control-size: 16px;
+  
+  .toggle-control {
+    display: block;
+    position: relative;
+    padding-left: $toggle-width;
+    margin-bottom: 12px;
     cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  input:checked ~ .control {
-    background-color: $toggle-background-color-on;
-
-    &:after {
-      left: $toggle-width - $toggle-control-size;
-    }
-  }
-
-  .control {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: $toggle-height;
-    width: $toggle-width;
-    border-radius: $toggle-radius;
-    background-color: $toggle-background-color-off;
-    transition: background-color $toggle-control-speed $toggle-control-ease;
-
-    &:after {
-      content: "";
+    font-size: 22px;
+    user-select: none;
+  
+    input {
       position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+  
+    input:checked ~ .control {
+      background-color: $toggle-background-color-on;
+  
+      &:after {
+        left: $toggle-width - $toggle-control-size;
+      }
+    }
+  
+    .control {
+      position: absolute;
+      top: 0;
       left: 0;
-      top: -1px;
-      width: $toggle-control-size;
-      height: $toggle-control-size;
+      height: $toggle-height;
+      width: $toggle-width;
       border-radius: $toggle-radius;
-      background: $toggle-control-color;
-      transition: left $toggle-control-speed $toggle-control-ease;
+      background-color: $toggle-background-color-off;
+      transition: background-color $toggle-control-speed $toggle-control-ease;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: $toggle-control-size;
+        height: $toggle-control-size;
+        border-radius: $toggle-radius;
+        background: $toggle-control-color;
+        transition: left $toggle-control-speed $toggle-control-ease;
+      }
     }
   }
 }
@@ -1169,6 +1177,14 @@ $toggle-control-size: 16px;
     color: #000 !important;
   }
 
+  .about__input:focus:required:invalid {
+    border: 1px solid red;
+  }
+
+  .about__input:required:valid {
+    border: 1px solid green;
+  }
+
   .about__input:focus {
     border: 0;
     outline: none;
@@ -1448,6 +1464,14 @@ $toggle-control-size: 16px;
     margin-left: 60px;
   }
 
+  input:focus:required:invalid {
+    border: 1px solid red;
+  }
+
+  input:required:valid {
+    border: 1px solid green;
+  }
+
   .contacts__second-half {
     margin-top: 70px;
   }
@@ -1615,17 +1639,22 @@ $toggle-control-size: 16px;
 
     position: relative;
 
-    border: 2px solid #bacfc0;
-
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 60.5px;
-
     input {
-      width: 100%;
-      height: 100%;
+      width: 100% !important;
+      height: 100% !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      z-index: -1 !important;
     }
 
     label {
+
+      border: 2px solid #bacfc0;
+
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.5);
+      border-radius: 60.5px;
+
       display: block;
       position: absolute;
       width: 100%;
@@ -1646,6 +1675,7 @@ $toggle-control-size: 16px;
     }
 
     img {
+      border-radius: 60.5px;
       width: 100%;
       height: 100%;
     }
@@ -1658,10 +1688,23 @@ $toggle-control-size: 16px;
 
   .profile__col {
     display: block;
+    margin-bottom: 15px;
     width: 207px;
-    padding: 18px 8px 8px;
-    border-bottom: 1px solid #ebebeb;
     color: #4f4f4f;
+  }
+
+  .profile__input {
+    width: 100%;
+    padding: 8px;
+    border-bottom: 1px solid #ebebeb;
+  }
+
+  .profile__input:focus:required:invalid {
+    border-bottom: 1px solid red;
+  }
+
+  .profile__input:required:valid {
+    border-bottom: 1px solid green;
   }
 
   .profile__phone {
@@ -1679,7 +1722,7 @@ $toggle-control-size: 16px;
   .profile__name {
     label {
       display: block;
-      margin-bottom: 15px;
+      margin: 0;
     }
   }
 
@@ -1713,8 +1756,24 @@ $toggle-control-size: 16px;
     }
   }
 
-  .profile__date-birth {
-    margin-bottom: 0;
+  .profile__date {
+    input {
+      width: 100%;
+      padding: 5px;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      color: rgba(0, 0, 0, 0);
+      opacity: 1;
+      display: block;
+      background: url(../img/icons/calendar-icon.png) no-repeat;
+      width: 20px;
+      height: 20px;
+      border-width: thin;
+      cursor: pointer;
+    }
+
   }
 
   .profile-edit__button {
@@ -1732,6 +1791,8 @@ $toggle-control-size: 16px;
   }
 
   .profile__passport-photo-inputs {
+    padding: 8px;
+    border-bottom: 1px solid #ebebeb;
     display: flex;
 
     input {
@@ -1755,6 +1816,7 @@ $toggle-control-size: 16px;
       background: url(../img/icons/photo-camera-icon.png) 100% 50% no-repeat;
     }
   }
+
 }
 
 // percentage in bottom
@@ -2061,6 +2123,14 @@ $toggle-control-size: 16px;
     border-radius: 25px;
   }
 
+  .support__input:focus:required:invalid {
+    border: 1px solid red;
+  }
+
+  .support__input:required:valid {
+    border: 1px solid green;
+  }
+
   .support__select {
     appearance: none;
     outline: none;
@@ -2091,14 +2161,13 @@ $toggle-control-size: 16px;
     height: 100px;
   }
 
-  .photo-img {
+  .img-wrapper {
     width: 100%;
     height: 100%;
 
     img {
+      display: none;
       object-fit: contain;
-      width: 100%;
-      height: 100%;
     }
   }
 

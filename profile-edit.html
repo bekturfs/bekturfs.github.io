@@ -21,14 +21,18 @@
           </a>
           <ul class="nav-list">
             <li class="nav-item nav-item-profile-photo">
-              <img src="img/profile-photo.png" alt="" srcset="">
+              <img src="img/profile-photo.png" alt="" srcset="" />
             </li>
             <!-- add link-active class for current page -->
             <li class="nav-item link-active">
               <a class="nav-link" href="#">Мой профиль</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Мои заявки</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Служба поддержки</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Мои заявки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Служба поддержки</a>
+            </li>
             <li class="nav-item nav-item-btn">
               <a class="nav-link" href="#">Выйти</a>
             </li>
@@ -37,28 +41,33 @@
         </nav>
       </div>
     </header>
-    <section class="profile">
-      <h1 class="profile__title">Мой профиль</h1>
-      <h2 class="profile__title2">Редактирование</h2>
-      <form action="" class="profile-edit__form" method="GET">
+    <section class="profile registration">
+      <h1 class="profile__title">Регистрация</h1>
+      <h2 class="profile__title2">Личные данные</h2>
+      <form action="index.php" class="profile-edit__form" method="POST">
         <div class="white-container-big mb-0 mt-0">
           <div class="profile__content profile__content-edit">
             <div class="profile__img">
+              <input id="profile-photo" accept="image/*" type="file" />
               <label for="profile-photo"></label>
-              <input
-                id="profile-photo"
-                type="file"
-                class="hidden-input"
-                required
+              <img
+                src="img/profile-photo.png"
+                id="profile__upload-img"
+                alt="Фото профиля"
               />
-              <img src="img/profile-photo.png" alt="Фото профиля" />
             </div>
             <div class="profile__row">
               <div class="profile__col profile__name">
                 <label for="lastname">Фамилия</label>
-                <input type="text" id="lastname" placeholder="Doe" required />
+                <input
+                  type="text"
+                  id="lastname"
+                  class="profile__input"
+                  placeholder="Doe"
+                  required
+                />
               </div>
-              <div class="application__date profile__date-birth profile__col">
+              <div class="profile__date profile__col">
                 <label for="birth-date">Дата рождения</label>
                 <input
                   value="1991-01-01"
@@ -72,13 +81,20 @@
             <div class="profile__row">
               <div class="profile__col profile__name">
                 <label for="firstname">Имя</label>
-                <input type="text" id="firstname" placeholder="John" required />
+                <input
+                  type="text"
+                  id="firstname"
+                  class="profile__input"
+                  placeholder="John"
+                  required
+                />
               </div>
               <div class="profile__col profile__name">
                 <label for="email">Email</label>
                 <input
-                  type="text"
+                  type="email"
                   id="email"
+                  class="profile__input"
                   placeholder="johndoe@mail.com"
                   required
                 />
@@ -90,6 +106,7 @@
                 <input
                   type="text"
                   id="patronymic"
+                  class="profile__input"
                   placeholder="Отчество"
                   required
                 />
@@ -97,8 +114,10 @@
               <div class="profile__col profile__name">
                 <label for="number-of-phone">Номер телефона</label>
                 <input
-                  type="text"
+                  type="tel"
                   id="number-of-phone"
+                  class="profile__input"
+                  pattern="[+]{1}[0-9]{12}||[0-9]{10}"
                   placeholder="+996 *** ******"
                   required
                 />
@@ -110,6 +129,7 @@
                 <input
                   type="text"
                   id="password1"
+                  class="profile__input"
                   placeholder="******"
                   required
                 />
@@ -119,6 +139,7 @@
                 <input
                   type="text"
                   id="password2"
+                  class="profile__input"
                   placeholder="******"
                   required
                 />
@@ -131,6 +152,7 @@
                 <input
                   type="text"
                   id="seria-of-passport"
+                  class="profile__input"
                   placeholder="серия паспорта"
                   required
                 />
@@ -140,21 +162,19 @@
                 <input
                   type="text"
                   id="issued-by"
+                  class="profile__input"
                   placeholder="кем выдан"
                   required
                 />
               </div>
             </div>
             <div class="profile__row">
-              <div
-                class="application__date application__inputs profile__date-birth profile__col"
-              >
-                <label for="issued-time">Когда выдан</label>
+              <div class="profile__date profile__col">
+                <label for="birth-date">Когда выдан</label>
                 <input
                   value="2010-01-01"
                   type="date"
-                  id="issued-time"
-                  class="profile__date-input"
+                  id="birth-date"
                   required
                 />
               </div>
@@ -166,43 +186,37 @@
             <div class="profile__row">
               <div class="profile__col">
                 <div class="profile__passport-photo-inputs">
-                  <label class="photo-label"
-                    >Фото паспорта
-                    <input type="file" class="photo-input" required />
-                  </label>
-                  <label class="photo-camera-label">
-                    <input
-                      type="file"
-                      class="photo-camera-input"
-                      accept="image/*"
-                      capture
-                      required
-                    />
-                  </label>
+                  <input
+                    type="file"
+                    id="photo-input1"
+                    class="photo-input"
+                    required
+                  />
+                  <label for="photo-input1" class="photo-label"
+                    >Фото паспорта</label
+                  >
+                  <label for="photo-input1" class="photo-camera-label"></label>
                 </div>
               </div>
               <div class="profile__col">
                 <div class="profile__passport-photo-inputs">
-                  <label class="photo-label"
-                    >Фото паспорта
-                    <input type="file" class="photo-input" required />
-                  </label>
-                  <label class="photo-camera-label">
-                    <input
-                      type="file"
-                      class="photo-camera-input"
-                      accept="image/*"
-                      capture
-                      required
-                    />
-                  </label>
+                  <input
+                    type="file"
+                    id="photo-input2"
+                    class="photo-input"
+                    required
+                  />
+                  <label for="photo-input2" class="photo-label"
+                    >Фото паспорта</label
+                  >
+                  <label for="photo-input2" class="photo-camera-label"></label>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <button type="submit" class="red-btn profile-edit__button">
-          Сохранить
+          Зарегистрироваться
         </button>
       </form>
     </section>
@@ -231,6 +245,7 @@
       </div>
     </footer>
     <script src="js/header.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/profile-edit.js"></script>
   </body>
 </html>

@@ -141,6 +141,7 @@ body {
   background-size: 100% 100%;
 }
 
+.proposal-info-body,
 .proposal-info-body {
   background-size: cover;
 }
@@ -317,6 +318,13 @@ body {
 }
 
 /* credit */
+.credit {
+  /* credit sum */
+  /* credit quiz */
+  /* credit term */
+  /* credit bail */
+}
+
 .credit option {
   color: #000;
 }
@@ -391,7 +399,11 @@ body {
   color: #9da7a1;
 }
 
-.credit .credit__item input:focus {
+.credit .credit__item input:focus:required:invalid {
+  border-color: red;
+}
+
+.credit .credit__item input:required:valid {
   border-color: green;
 }
 
@@ -400,7 +412,6 @@ body {
   padding-left: 40px;
 }
 
-/* credit sum */
 .credit .credit__item-sum label {
   background: url(../img/icons/sum-icon.png) 0 0px no-repeat;
 }
@@ -428,7 +439,6 @@ body {
   width: 25%;
 }
 
-/* credit quiz */
 .credit .credit__item-quiz select {
   width: 100%;
   padding: 15px 0;
@@ -438,7 +448,6 @@ body {
   background: url(../img/icons/quiz-icon.png) 0 0 no-repeat;
 }
 
-/* credit term */
 .credit .credit__item-term {
   margin-top: 50px;
 }
@@ -454,7 +463,6 @@ body {
   background: url(../img/icons/calendar-icon.png) 0 0px no-repeat;
 }
 
-/* credit bail */
 .credit .credit__item-bail {
   margin-top: 50px;
   position: relative;
@@ -474,7 +482,7 @@ body {
   left: 200px;
 }
 
-.toggle-control {
+.credit .toggle-control {
   display: block;
   position: relative;
   padding-left: 33px;
@@ -487,7 +495,7 @@ body {
           user-select: none;
 }
 
-.toggle-control input {
+.credit .toggle-control input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -495,15 +503,15 @@ body {
   width: 0;
 }
 
-.toggle-control input:checked ~ .control {
+.credit .toggle-control input:checked ~ .control {
   background-color: dodgerblue;
 }
 
-.toggle-control input:checked ~ .control:after {
+.credit .toggle-control input:checked ~ .control:after {
   left: 17px;
 }
 
-.toggle-control .control {
+.credit .toggle-control .control {
   position: absolute;
   top: 0;
   left: 0;
@@ -515,7 +523,7 @@ body {
   transition: background-color 0.15s ease-in;
 }
 
-.toggle-control .control:after {
+.credit .toggle-control .control:after {
   content: "";
   position: absolute;
   left: 0;
@@ -1190,6 +1198,14 @@ body {
   color: #000 !important;
 }
 
+.about .about__input:focus:required:invalid {
+  border: 1px solid red;
+}
+
+.about .about__input:required:valid {
+  border: 1px solid green;
+}
+
 .about .about__input:focus {
   border: 0;
   outline: none;
@@ -1458,6 +1474,14 @@ body {
   margin-left: 60px;
 }
 
+.contacts input:focus:required:invalid {
+  border: 1px solid red;
+}
+
+.contacts input:required:valid {
+  border: 1px solid green;
+}
+
 .contacts .contacts__second-half {
   margin-top: 70px;
 }
@@ -1627,18 +1651,22 @@ body {
   width: 120px;
   height: 120px;
   position: relative;
+}
+
+.profile .profile__img input {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  z-index: -1 !important;
+}
+
+.profile .profile__img label {
   border: 2px solid #bacfc0;
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.5);
   border-radius: 60.5px;
-}
-
-.profile .profile__img input {
-  width: 100%;
-  height: 100%;
-}
-
-.profile .profile__img label {
   display: block;
   position: absolute;
   width: 100%;
@@ -1657,6 +1685,7 @@ body {
 }
 
 .profile .profile__img img {
+  border-radius: 60.5px;
   width: 100%;
   height: 100%;
 }
@@ -1672,10 +1701,23 @@ body {
 
 .profile .profile__col {
   display: block;
+  margin-bottom: 15px;
   width: 207px;
-  padding: 18px 8px 8px;
-  border-bottom: 1px solid #ebebeb;
   color: #4f4f4f;
+}
+
+.profile .profile__input {
+  width: 100%;
+  padding: 8px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.profile .profile__input:focus:required:invalid {
+  border-bottom: 1px solid red;
+}
+
+.profile .profile__input:required:valid {
+  border-bottom: 1px solid green;
 }
 
 .profile .profile__phone {
@@ -1692,7 +1734,7 @@ body {
 
 .profile .profile__name label {
   display: block;
-  margin-bottom: 15px;
+  margin: 0;
 }
 
 .profile .profile__sub-title {
@@ -1727,8 +1769,21 @@ body {
   width: 100%;
 }
 
-.profile .profile__date-birth {
-  margin-bottom: 0;
+.profile .profile__date input {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.profile .profile__date input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/icons/calendar-icon.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  border-width: thin;
+  cursor: pointer;
 }
 
 .profile .profile-edit__button {
@@ -1746,6 +1801,8 @@ body {
 }
 
 .profile .profile__passport-photo-inputs {
+  padding: 8px;
+  border-bottom: 1px solid #ebebeb;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2057,6 +2114,14 @@ body {
   border-radius: 25px;
 }
 
+.support .support__input:focus:required:invalid {
+  border: 1px solid red;
+}
+
+.support .support__input:required:valid {
+  border: 1px solid green;
+}
+
 .support .support__select {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -2091,16 +2156,15 @@ body {
   height: 100px;
 }
 
-.support .photo-img {
+.support .img-wrapper {
   width: 100%;
   height: 100%;
 }
 
-.support .photo-img img {
+.support .img-wrapper img {
+  display: none;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 100%;
-  height: 100%;
 }
 
 .support .photo-input {

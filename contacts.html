@@ -81,11 +81,13 @@
                     type="text"
                     class="contacts__fullname-input flex-basis-50"
                     placeholder="Фио"
+                    required
                   />
                   <input
                     type="text"
                     class="contacts__phone-number-input flex-basis-50"
                     placeholder="Номер телефона"
+                    pattern="[+]{1}[0-9]{12}||[0-9]{10}" required
                   />
                 </div>
               </div>

@@ -51,11 +51,11 @@
             </div>
           </div>
         </div>
-        <form action="" class="about__form">
+        <form action="index.php" class="about__form" method="POST">
           <div class="about__content">
-            <input type="email" class="about__input" placeholder="Email" />
+            <input type="email" class="about__input" name="" placeholder="Email" required/>
             <span class="about__text-and">Или</span>
-            <input type="text" class="about__input" placeholder="Phone" />
+            <input type="tel" class="about__input" pattern="[+]{1}[0-9]{12}||[0-9]{10}" placeholder="Phone" value="+996" required/>
           </div>
           <button type="submit" class="red-btn">Отправить заявку</button>
         </form>
