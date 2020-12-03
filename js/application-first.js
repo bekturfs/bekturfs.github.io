@@ -4,19 +4,20 @@
   $('.application__radio').on('click', function(e) {
     if($('#married').is(':checked')) {
       $('#married-content').css("display", "block");
+      $('#married-content input').each(function () {
+        $(this).prop('required', 'true')
+      })
     } else {
       $('#married-content').css("display", "none");
+      $('#married-content input').each(function () {
+        $(this).removeAttr('required')
+      })
     }
   })
 
-    $('.application__input').keyup(function() {
+    $('.application__checkbox-input').on('change', function() {
 
         var empty = false;
-        $('.application__text-input').each(function() {
-            if ($(this).val() == '') {
-                empty = true;
-            }
-        });
 
         $('.application__checkbox-input').each(function() {
           if (!$(this).is(':checked')) {
@@ -30,6 +31,12 @@
             $('#submit-btn').removeAttr('disabled'); // updated according to http://stackoverflow.com/questions/7637790/how-to-remove-disabled-attribute-with-jquery-ie
         }
     });
+
+    $('.file-input').on('change', function () { 
+      var name = this.files[0].name;
+      $(this).parent().find('.photo-label').text(name);
+     })
+
 
     var inputsCount = 9;
     var checkboxCount = 9;

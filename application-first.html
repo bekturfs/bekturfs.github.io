@@ -40,7 +40,7 @@
         </nav>
       </div>
     </header>
-    <form action="">
+    <form action="index.php" method="POST" enctype="multipart/form-data">
       <section class="application application1">
         <h1 class="application__title">Заполните заявку</h1>
         <h2 class="application__sub-title1">1 Шаг</h2>
@@ -52,6 +52,7 @@
                 type="text"
                 class="application__inputs application__text-input application__input"
                 placeholder="Фио"
+                required
               />
               <div class="application__date application__inputs">
                 <label for="birth-input">Дата рождения</label>
@@ -61,53 +62,44 @@
                 type="text"
                 class="application__inputs application__text-input application__input"
                 placeholder="Место жительства"
+                required
               />
               <div class="application__photo application__inputs">
-                <label class="photo-label"
-                  >Добавить фото лица
-                  <input type="file" class="photo-input" />
-                </label>
-                <label class="photo-camera-label">
-                  <input
-                    type="file"
-                    class="photo-camera-input"
-                    accept="image/*"
-                    capture
-                  />
-                </label>
+                <input type="file" class="photo-input file-input" id="photo-input1" required/>
+                <label for="photo-input1" class="photo-label"> Добавить фото лица </label>
+                <label for="photo-input1" class="photo-camera-label"></label>
               </div>
               <input
                 type="text"
                 class="application__inputs application__text-input application__input"
                 placeholder="Номер паспорта"
+                required
               />
               <input
                 type="text"
                 class="application__inputs application__text-input application__input"
                 placeholder="Кем выдан"
+                required
               />
               <div class="application__date application__inputs">
                 <label for="issues-date-input">Дата выдачи</label>
-                <input value="1991-01-01" type="date" id="issues-date-input" />
+                <input value="1991-01-01" type="date" id="issues-date-input"/>
               </div>
               <input
                 type="text"
                 class="application__inputs application__text-input"
                 placeholder="ИНН"
+                required
               />
               <div class="application__photo application__inputs">
-                <label class="photo-label"
-                  >Добавить фото лица
-                  <input type="file" class="photo-input" />
-                </label>
-                <label class="photo-camera-label">
-                  <input
-                    type="file"
-                    class="photo-camera-input"
-                    accept="image/*"
-                    capture
-                  />
-                </label>
+                <input type="file" class="photo-input file-input" id="photo-input2" required/>
+                <label for="photo-input2" class="photo-label">Прикрепи/сфотай <br> паспорт 1 </label>
+                <label for="photo-input2" class="photo-camera-label"></label>
+              </div>
+              <div class="application__photo application__inputs">
+                <input type="file" class="photo-input file-input" id="photo-input3" required/>
+                <label for="photo-input3" class="photo-label">Прикрепи/сфотай <br> паспорт 2 </label>
+                <label for="photo-input3" class="photo-camera-label"></label>
               </div>
             </div>
             <div class="application__right">
@@ -134,7 +126,7 @@
                   <span class="checkmark"></span>
                 </label>
                 <div id="married-content" class="married">
-                  <input type="text" placeholder="ФИО супруг(а)" />
+                  <input type="text" placeholder="ФИО супруг(а)"/>
                   <input type="text" placeholder="Количество детей" />
                 </div>
                 <label class="container application__inputs"
@@ -160,11 +152,13 @@
                 type="email"
                 class="application__inputs application__text-input application__input"
                 placeholder="Email"
+                required
               />
               <input
                 type="tel"
                 class="application__inputs application__text-input application__input"
                 placeholder="Телефон"
+                required
               />
               <button class="application__sms-button">
                 Получить СМС - код
@@ -283,13 +277,7 @@
             </li>
           </ul>
         </div>
-        <button
-          id="submit-btn"
-          class="agreement__button"
-          type="submit"
-          form="application-first-form"
-          disabled="disabled"
-        >
+        <button id="submit-btn" class="agreement__button" type="submit" disabled>
           <div class="agreement__button-arrow"></div>
           Следующий шаг
         </button>

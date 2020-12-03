@@ -141,6 +141,10 @@ body {
   background-size: 100% 100%;
 }
 
+.proposal-info-body {
+  background-size: cover;
+}
+
 .main-container {
   max-width: 870px;
   margin: 0 auto;
@@ -772,6 +776,18 @@ body {
   padding: 12px;
   margin-top: 8px;
   border-bottom: 1px solid #E0E0E0 !important;
+}
+
+.application__inputs:focus:required:invalid {
+  border-bottom: 1px solid red !important;
+}
+
+.application__inputs:required:valid {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+.photo-input:focus:required:invalid + label {
+  color: red;
 }
 
 .application__costs {

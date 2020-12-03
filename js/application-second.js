@@ -30,6 +30,11 @@ function showHideContent(context, inputsCount){
     }
 }
 
+$('.file-input').on('change', function () { 
+    var name = this.files[0].name;
+    $(this).parent().find('.photo-label').text(name);
+   })
+
 var startPercent = 40;
 
 $('.application-percentage .line .filled-line').css('width', startPercent + '%' );
