@@ -616,5 +616,14 @@
   .about-us .content {
     padding: 40px 24px;
   }
+  .login .login__buttons {
+    display: block;
+    width: 250px;
+    margin-bottom: 90px;
+  }
+  .login .login-btn {
+    width: 100%;
+    margin: 40px 0 0px;
+  }
 }
 /*# sourceMappingURL=media.css.map */
