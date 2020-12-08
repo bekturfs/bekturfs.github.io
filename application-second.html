@@ -28,7 +28,9 @@
               <a class="nav-link" href="#">Как это работает</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-            <li class="nav-item nav-item-documents"><a class="nav-link" href="#">Документы</a></li>
+            <li class="nav-item nav-item-documents">
+              <a class="nav-link" href="#">Документы</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Вход/Регистрация</a>
@@ -38,9 +40,71 @@
         </nav>
       </div>
     </header>
-    <form action="">
+    <form action="index.php" method="GET">
+      <h1 class="application__title">Заполните заявку</h1>
+      <section class="credit">
+        <div class="main-container">
+          <h2 class="application__sub-title1">1 Шаг</h2>
+          <h2 class="application__sub-title2">На какой кредит вы рассчитываете ?</h2>
+          <div class="credit__content">
+              <fieldset>
+                <ul class="credit__list">
+                  <li class="credit__item credit__item-sum">
+                    <label for="sum-input"> Сумма желаемого кредита </label>
+                    <div class="credit__inputs">
+                      <input
+                        id="sum-input"
+                        type="number"
+                        placeholder="сумма"
+                        required
+                      />
+                      <select name="" id="sum-select">
+                        <option value="lorem">lorem</option>
+                        <option value="lorem">lorem</option>
+                        <option value="lorem">lorem</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="credit__item credit__item-quiz">
+                    <label> На что хотите взять </label>
+                    <select name="" id="quiz-select">
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                      <option value="lorem">lorem</option>
+                    </select>
+                  </li>
+                  <li class="credit__item credit__item-term">
+                    <label for="term-input"> Срок кредита </label>
+                    <div class="credit__inputs">
+                      <!-- <input id="term-input" type="number" placeholder="3" /> -->
+                      <select name="" id="term-select">
+                        <option value="lorem">lorem</option>
+                        <option value="lorem">lorem</option>
+                        <option value="lorem">lorem</option>
+                      </select>
+                    </div>
+                  </li>
+                  <li class="credit__item credit__item-bail">
+                    <label for="bail-input"> С залогом или без </label>
+                    <div class="credit__toggle-ios">
+                      <label class="toggle-control">
+                        <input id="ios-toggle" type="checkbox" />
+                        <span class="control"></span>
+                      </label>
+                    </div>
+                    <input
+                      type="text"
+                      id="bail-input"
+                      class="display-none"
+                      placeholder="Недвижимость, машина и т.д"
+                    />
+                  </li>
+                </ul>
+              </fieldset>
+          </div>
+        </div>
+      </section>
       <section class="application application2">
-        <h1 class="application__title">Заполните заявку</h1>
         <h2 class="application__sub-title1">2 Шаг</h2>
         <h2 class="application__sub-title2">Информация о доходе</h2>
         <div class="application__content">
@@ -84,9 +148,20 @@
                     required
                   />
                   <div class="application__photo application__inputs">
-                    <input type="file" class="photo-input file-input" id="photo-input1" required/>
-                    <label for="photo-input1" class="photo-label">Прикрепи/сфотай <br> документ </label>
-                    <label for="photo-input1" class="photo-camera-label"></label>
+                    <input
+                      type="file"
+                      class="photo-input file-input"
+                      id="photo-input1"
+                      required
+                    />
+                    <label for="photo-input1" class="photo-label"
+                      >Прикрепи/сфотай <br />
+                      документ
+                    </label>
+                    <label
+                      for="photo-input1"
+                      class="photo-camera-label"
+                    ></label>
                   </div>
                 </div>
               </div>
@@ -100,7 +175,6 @@
                       type="checkbox"
                       checked="checked"
                       id="application-own-business"
-                      required
                     />
                     <span class="checkmark"></span>
                   </label>
@@ -130,8 +204,9 @@
                     placeholder="Месячный доход"
                     required
                   />
-                  <div class="dropdown-name dropdown-name-consumption">Расходы за месяц - 
-                    <span id="total-sum"></span> <span class="kyrgyz-som">c</span>
+                  <div class="dropdown-name dropdown-name-consumption">
+                    Расходы за месяц - <span id="total-sum"></span>
+                    <span class="kyrgyz-som">c</span>
                   </div>
                   <input
                     type="number"
@@ -159,12 +234,23 @@
                     class="application__inputs application__text-input application__costs"
                     placeholder="Ком.услуги"
                     id="application__com-services"
-                    required  
+                    required
                   />
                   <div class="application__photo application__inputs">
-                    <input type="file" class="photo-input file-input" id="photo-input2" required/>
-                    <label for="photo-input2" class="photo-label">Прикрепи/сфотай <br> документ </label>
-                    <label for="photo-input2" class="photo-camera-label"></label>
+                    <input
+                      type="file"
+                      class="photo-input file-input"
+                      id="photo-input2"
+                      required
+                    />
+                    <label for="photo-input2" class="photo-label"
+                      >Прикрепи/сфотай <br />
+                      документ
+                    </label>
+                    <label
+                      for="photo-input2"
+                      class="photo-camera-label"
+                    ></label>
                   </div>
                   <input
                     type="number"
@@ -177,8 +263,63 @@
           </div>
         </div>
       </section>
-      <section class="application application3">
+      <section class="application application4">
         <h2 class="application__sub-title1">3 шаг</h2>
+        <h2 class="application__sub-title2">Информация о поручителе</h2>
+        <div class="application__content application__dropdown">
+          <div class="dropdown-name">
+            <label class="container"
+              >Lorem
+              <input
+                type="checkbox"
+                checked="checked"
+                id="application-guarantor"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="dropdown-content">
+            <div class="application__flex-container">
+              <div class="application__left">
+                <input
+                  type="text"
+                  class="application__inputs application__text-input"
+                  placeholder="ФИО поручителя"
+                  required
+                />
+                <input
+                  type="text"
+                  class="application__inputs application__text-input"
+                  placeholder="Кем приходиться"
+                  required
+                />
+                <input
+                  type="text"
+                  class="application__inputs application__text-input"
+                  placeholder="Адрес проживания"
+                  required
+                />
+              </div>
+              <div class="application__right">
+                <input
+                  type="text"
+                  class="application__inputs application__text-input"
+                  placeholder="Вид деятельности"
+                  required
+                />
+                <input
+                  type="number"
+                  class="application__inputs application__text-input"
+                  placeholder="Выручка/зарплата (в сомах)"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="application application3">
+        <h2 class="application__sub-title1">4 шаг</h2>
         <h2 class="application__sub-title2">Информация о залоге</h2>
         <div class="application__content">
           <h3 class="application__inner-title">Тип залога</h3>
@@ -222,9 +363,20 @@
                     required
                   />
                   <div class="application__photo application__inputs">
-                    <input type="file" class="photo-input file-input" id="photo-input3" required/>
-                    <label for="photo-input3" class="photo-label">Прикрепи/сфотай <br> документ </label>
-                    <label for="photo-input3" class="photo-camera-label"></label>
+                    <input
+                      type="file"
+                      class="photo-input file-input"
+                      id="photo-input3"
+                      required
+                    />
+                    <label for="photo-input3" class="photo-label"
+                      >Прикрепи/сфотай <br />
+                      документ
+                    </label>
+                    <label
+                      for="photo-input3"
+                      class="photo-camera-label"
+                    ></label>
                   </div>
                 </div>
               </div>
@@ -268,9 +420,20 @@
                     required
                   />
                   <div class="application__photo application__inputs">
-                    <input type="file" class="photo-input file-input" id="photo-input4" required/>
-                    <label for="photo-input4" class="photo-label">Прикрепи/сфотай <br> документ </label>
-                    <label for="photo-input4" class="photo-camera-label"></label>
+                    <input
+                      type="file"
+                      class="photo-input file-input"
+                      id="photo-input4"
+                      required
+                    />
+                    <label for="photo-input4" class="photo-label"
+                      >Прикрепи/сфотай <br />
+                      документ
+                    </label>
+                    <label
+                      for="photo-input4"
+                      class="photo-camera-label"
+                    ></label>
                   </div>
                 </div>
               </div>
@@ -278,50 +441,8 @@
           </div>
         </div>
       </section>
-      <section class="application application4">
-        <h2 class="application__sub-title1">4 шаг</h2>
-        <h2 class="application__sub-title2">Информация о поручителе</h2>
-        <div class="application__content">
-          <div class="application__flex-container">
-            <div class="application__left">
-              <input
-                type="text"
-                class="application__inputs application__text-input"
-                placeholder="ФИО поручителя"
-                required
-              />
-              <input
-                type="text"
-                class="application__inputs application__text-input"
-                placeholder="Кем приходиться"
-                required
-              />
-              <input
-                type="text"
-                class="application__inputs application__text-input"
-                placeholder="Адрес проживания"
-                required
-              />
-            </div>
-            <div class="application__right">
-              <input
-                type="text"
-                class="application__inputs application__text-input"
-                placeholder="Вид деятельности"
-                required
-              />
-              <input
-                type="number"
-                class="application__inputs application__text-input"
-                placeholder="Выручка/зарплата (в сомах)"
-                required
-              />
-            </div>
-          </div>
-        </div>
-      </section>
       <h2 class="application__sub-title1 application__filled-out-text"></h2>
-      <button class="red-btn">Отправить заявку</button>
+      <button class="red-btn" type="submit">Отправить заявку</button>
     </form>
     <section class="application-percentage">
       <div class="line">

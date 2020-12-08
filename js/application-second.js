@@ -18,6 +18,10 @@ $('#application-movable').on('click', function(){
     showHideContent(this, 4)
 })
 
+$('#application-guarantor').on('click', function(){
+    showHideContent(this, 5)
+})
+
 function requiredInputs(context, flag) {
 
     var inputs = $(context).find('input');
