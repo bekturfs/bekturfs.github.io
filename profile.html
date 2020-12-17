@@ -21,14 +21,22 @@
           </a>
           <ul class="nav-list">
             <li class="nav-item nav-item-profile-photo">
-              <img src="img/profile-photo.png" alt="" srcset="">
+              <img src="img/profile-photo.png" alt="" srcset="" />
             </li>
             <!-- add link-active class for current page -->
             <li class="nav-item link-active">
               <a class="nav-link" href="#">Мой профиль</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Мои заявки</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Служба поддержки</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link drop-btn" href="#">Мои заявки</a>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Служба поддержки</a>
+            </li>
             <li class="nav-item nav-item-btn">
               <a class="nav-link" href="#">Выйти</a>
             </li>

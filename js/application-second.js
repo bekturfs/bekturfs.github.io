@@ -33,6 +33,7 @@ function requiredInputs(context, flag) {
     } else {
         inputs.each(function(){
             $(this).removeAttr('required')
+            $(this).val('');
         })
     }
 }
