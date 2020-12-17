@@ -204,7 +204,7 @@
     .nav-item:hover {
       border-bottom: 0;
 
-      a {
+      .nav-link {
         color: green;
       }
     }
@@ -265,14 +265,50 @@
         color: #ffffff;
       }
 
-      a:hover {
-        color: #fff;
+      .nav-link:hover {
+        color: green;
       }
     }
 
     .nav-item-btn:hover {
       background: #ca2a2a;
     }
+
+    .dropdown {
+      position: relative;
+      display: block;
+    }
+    
+    .dropdown-content {
+      display: block;
+      position: static;
+      top: 0;
+      left: 0;
+      min-width: 200px;
+      box-shadow: none;
+      z-index: 0;
+      background-color: inherit;
+      border-radius: 5px;
+    }
+    
+    .dropdown-content a {
+      color: inherit;
+      margin: 0;
+      padding: 5px 13px 0;
+      text-decoration: none;
+      display: block;
+      border: none;
+    }
+    
+    .dropdown-content a:hover {
+      background-color: inherit;
+      color: green;
+    }
+  
+    .dropdown-content a:hover {
+      border: none;
+    }
+
   }
 
   .hidden-element {

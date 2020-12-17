@@ -177,7 +177,7 @@
   .main-header .nav-item:hover {
     border-bottom: 0;
   }
-  .main-header .nav-item:hover a {
+  .main-header .nav-item:hover .nav-link {
     color: green;
   }
   .main-header-authenticated .nav-item-profile-photo {
@@ -238,11 +238,42 @@
     line-height: 19px;
     color: #ffffff;
   }
-  .main-header-authenticated .nav-item-btn a:hover {
-    color: #fff;
+  .main-header-authenticated .nav-item-btn .nav-link:hover {
+    color: green;
   }
   .main-header-authenticated .nav-item-btn:hover {
     background: #ca2a2a;
+  }
+  .main-header-authenticated .dropdown {
+    position: relative;
+    display: block;
+  }
+  .main-header-authenticated .dropdown-content {
+    display: block;
+    position: static;
+    top: 0;
+    left: 0;
+    min-width: 200px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    z-index: 0;
+    background-color: inherit;
+    border-radius: 5px;
+  }
+  .main-header-authenticated .dropdown-content a {
+    color: inherit;
+    margin: 0;
+    padding: 5px 13px 0;
+    text-decoration: none;
+    display: block;
+    border: none;
+  }
+  .main-header-authenticated .dropdown-content a:hover {
+    background-color: inherit;
+    color: green;
+  }
+  .main-header-authenticated .dropdown-content a:hover {
+    border: none;
   }
   .hidden-element {
     display: block;
