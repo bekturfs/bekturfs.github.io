@@ -44,7 +44,12 @@ button {
   z-index: -1 !important;
 }
 
-.red-btn, .blue-btn {
+.mh-70vh {
+  min-height: 70vh;
+}
+
+.red-btn,
+.blue-btn {
   display: block;
   width: 280px;
   margin: 30px auto 50px;
@@ -62,15 +67,17 @@ button {
   background: #ff4343;
 }
 
-.red-btn:hover, .red-btn:focus {
+.red-btn:hover,
+.red-btn:focus {
   background: #c41e1e;
 }
 
 .blue-btn {
-  background: #417A8A;
+  background: #417a8a;
 }
 
-.blue-btn:hover, .blue-btn:focus {
+.blue-btn:hover,
+.blue-btn:focus {
   background: #055972;
 }
 
@@ -124,7 +131,7 @@ button {
 }
 
 html {
-  background: #C2D7C8;
+  background: #c2d7c8;
   margin: 0;
   padding: 0;
 }
@@ -1554,6 +1561,13 @@ body {
 .proposal .proposal__item {
   max-width: 474px;
   margin: 0 auto 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #f5fffa;
+  -webkit-box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05), 0px 4px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05), 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
 }
 
 .proposal .proposal__item:last-child {
@@ -1561,18 +1575,49 @@ body {
 }
 
 .proposal .proposal__link {
-  width: 100%;
-  padding: 16px 136px;
+  width: 60%;
+  padding: 16px 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #f5fffa;
-  -webkit-box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05), 0px 4px 10px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05), 0px 4px 10px rgba(0, 0, 0, 0.05);
-  border-radius: 25px;
+}
+
+.proposal .proposal__link:hover {
+  background: #e7eeeb;
+  border-radius: 25px 0 0 25px;
+}
+
+.proposal .proposal__edit-link {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.proposal .proposal__edit-link a {
+  width: 75%;
+  height: 30px;
+  background: #c1c1c1;
+  border-radius: 40px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #000;
+}
+
+.proposal .proposal__edit-link a:hover {
+  background: #969696;
 }
 
 .proposal .proposal__name {

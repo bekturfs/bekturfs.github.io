@@ -278,7 +278,7 @@
       position: relative;
       display: block;
     }
-    
+
     .dropdown-content {
       display: block;
       position: static;
@@ -290,7 +290,7 @@
       background-color: inherit;
       border-radius: 5px;
     }
-    
+
     .dropdown-content a {
       color: inherit;
       margin: 0;
@@ -299,16 +299,15 @@
       display: block;
       border: none;
     }
-    
+
     .dropdown-content a:hover {
       background-color: inherit;
       color: green;
     }
-  
+
     .dropdown-content a:hover {
       border: none;
     }
-
   }
 
   .hidden-element {
@@ -702,7 +701,12 @@
     }
 
     .proposal__link {
-      padding: 16px 50px;
+      padding: 16px 20px;
+    }
+
+    .proposal__edit-link a {
+      width: 90%;
+      font-size: 14px;
     }
   }
 
@@ -802,4 +806,3 @@
     }
   }
 }
-

@@ -42,7 +42,12 @@ button {
   z-index: -1 !important;
 }
 
-.red-btn, .blue-btn {
+.mh-70vh {
+  min-height: 70vh;
+}
+
+.red-btn,
+.blue-btn {
   display: block;
   width: 280px;
   margin: 30px auto 50px;
@@ -63,15 +68,17 @@ button {
   background: #ff4343;
 }
 
-.red-btn:hover, .red-btn:focus {
+.red-btn:hover,
+.red-btn:focus {
   background: #c41e1e;
 }
 
 .blue-btn {
-  background: #417A8A;
+  background: #417a8a;
 }
 
-.blue-btn:hover, .blue-btn:focus {
+.blue-btn:hover,
+.blue-btn:focus {
   background: #055972;
 }
 
@@ -120,7 +127,7 @@ button {
 }
 
 html {
-  background: #C2D7C8;
+  background: #c2d7c8;
   margin: 0;
   padding: 0;
 }
@@ -143,7 +150,6 @@ body {
 .how-it-works-body {
   background-size: cover;
 }
-
 
 .main-container {
   max-width: 870px;
@@ -169,24 +175,24 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .main-logo {
     display: block;
     width: 160px;
     padding: 11px 0;
   }
-  
+
   .main-logo img {
     width: 100%;
   }
-  
+
   .nav-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 80px;
   }
-  
+
   .nav-item {
     margin-left: 85px;
     padding: 8px 0;
@@ -196,7 +202,7 @@ body {
   .nav-item-documents {
     display: none;
   }
-  
+
   .nav-item:hover {
     border-bottom: 2px solid #ff4343;
   }
@@ -204,20 +210,20 @@ body {
   .link-active {
     border-bottom: 2px solid #ff4343;
   }
-  
+
   .nav-item a {
     color: #fff;
   }
-  
+
   /* Hamburger */
-  
+
   .hamburger-menu {
     display: none;
     cursor: pointer;
     height: 20px;
     padding: 20px;
   }
-  
+
   .bar1,
   .bar3 {
     height: 2px;
@@ -226,42 +232,42 @@ body {
     transition: 0.4s;
     border-radius: 2px;
   }
-  
+
   .bar1 {
     width: 20px;
   }
-  
+
   .bar3 {
     width: 15px;
   }
-  
+
   .invis {
     width: 35px;
     height: 2px;
     /* margin: 6px 0; */
   }
-  
+
   .change .bar1,
   .change .invis,
   .change .bar3 {
     margin: 6px 0;
   }
-  
+
   .change .bar1 {
     transform: rotate(-45deg) translate(-7px, 5px);
     width: 20px;
   }
-  
+
   .change .bar3 {
     transform: rotate(45deg) translate(-6px, -4px);
     width: 20px;
   }
-  
+
   .dropdown {
     position: relative;
     display: block;
   }
-  
+
   .dropdown-content {
     display: none;
     position: absolute;
@@ -269,11 +275,11 @@ body {
     top: 36px;
     background-color: #000;
     min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
   }
-  
+
   .dropdown-content a {
     color: #fff;
     margin: 0 3px;
@@ -282,15 +288,20 @@ body {
     display: block;
     border-bottom: 2px solid #000;
   }
-  
-  .dropdown-content a:hover {background-color: rgb(22, 21, 21);}
-  
-  .dropdown:hover .dropdown-content {display: block; }
 
-  .dropdown-content a:hover {border-bottom: 2px solid #ff4343;}
-  
+  .dropdown-content a:hover {
+    background-color: rgb(22, 21, 21);
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    border-bottom: 2px solid #ff4343;
+  }
+
   // .dropdown:hover .drop-btn {border-bottom: 2px solid #ff4343;}
-
 }
 
 .main-header-authenticated {
@@ -317,7 +328,7 @@ body {
     border-bottom: 1.5px solid #000;
   }
 
-  a:hover{
+  a:hover {
     border-bottom: 1.5px solid #ff4343;
   }
 
@@ -340,14 +351,13 @@ body {
   }
 }
 
-
 /* credit */
 
 .credit {
   option {
     color: #000;
   }
-  
+
   .credit__title {
     width: 298.43px;
     margin: 90px auto 0;
@@ -357,45 +367,46 @@ body {
     text-align: center;
     color: #417a8a;
   }
-  
+
   .credit__content {
     max-width: 870px;
-  
+
     margin-top: 70px;
     padding: 70px 100px;
-  
+
     background: #f5fffa;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1),
+      0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 25px;
   }
-  
+
   fieldset {
     border: 0;
     margin: 0;
     padding: 0;
   }
-  
+
   .credit__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+
   .credit__item {
     width: 45%;
     display: block;
     position: relative;
   }
-  
+
   .credit__item select {
     padding-left: 10px !important;
   }
-  
+
   .credit__inputs {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .credit__item input {
     display: block;
     width: 65%;
@@ -413,22 +424,22 @@ body {
   .credit__item input:focus:required:invalid {
     border-color: red;
   }
-  
+
   .credit__item input:required:valid {
     border-color: green;
   }
-  
+
   .credit__item label {
     display: block;
     padding-left: 40px;
   }
-  
+
   /* credit sum */
-  
+
   .credit__item-sum label {
     background: url(../img/icons/sum-icon.png) 0 0px no-repeat;
   }
-  
+
   select {
     background: inherit;
     background: url(../img/icons/select-icon.png) 99% 30% no-repeat;
@@ -441,67 +452,67 @@ body {
     border-bottom: 2px solid #e0e0e0;
     outline: 0px;
   }
-  
+
   .credit__item-sum .credit__inputs {
     padding: 5px 0;
   }
-  
+
   .credit__item-sum select {
     width: 25%;
     // margin-left: 33px;
   }
-  
+
   /* credit quiz */
-  
+
   .credit__item-quiz select {
     width: 100%;
     padding: 15px 0;
   }
-  
+
   .credit__item-quiz label {
     background: url(../img/icons/quiz-icon.png) 0 0 no-repeat;
   }
-  
+
   /* credit term */
-  
+
   .credit__item-term {
     margin-top: 50px;
   }
-  
+
   .credit__item-term select {
     display: block;
     width: 100%;
     margin-top: 5px;
     padding: 10px 0;
   }
-  
+
   .credit__item-term label {
     background: url(../img/icons/calendar-icon.png) 0 0px no-repeat;
   }
-  
+
   /* credit bail */
-  
+
   .credit__item-bail {
     margin-top: 50px;
     position: relative;
   }
-  
+
   .credit__item-bail label:first-child {
     background: url(../img/icons/property-icon.png) 0 0px no-repeat;
   }
-  
+
   .credit__item-bail input {
     width: 100%;
   }
-  
+
   // credit bail toggle ios
-  
+
   .credit__toggle-ios {
     position: absolute;
     top: 5px;
     left: 200px;
   }
-  
+
   // Tweak these to change the style of the toggle
   $toggle-background-color-on: dodgerblue;
   $toggle-background-color-off: darkgray;
@@ -512,12 +523,12 @@ body {
   $toggle-radius: 50%;
   $toggle-control-speed: 0.15s;
   $toggle-control-ease: ease-in;
-  
+
   // These are our computed variables
   // change at your own risk.
   $toggle-radius: $toggle-height / 2;
   $toggle-control-size: 16px;
-  
+
   .toggle-control {
     display: block;
     position: relative;
@@ -526,7 +537,7 @@ body {
     cursor: pointer;
     font-size: 22px;
     user-select: none;
-  
+
     input {
       position: absolute;
       opacity: 0;
@@ -534,15 +545,15 @@ body {
       height: 0;
       width: 0;
     }
-  
+
     input:checked ~ .control {
       background-color: $toggle-background-color-on;
-  
+
       &:after {
         left: $toggle-width - $toggle-control-size;
       }
     }
-  
+
     .control {
       position: absolute;
       top: 0;
@@ -552,7 +563,7 @@ body {
       border-radius: $toggle-radius;
       background-color: $toggle-background-color-off;
       transition: background-color $toggle-control-speed $toggle-control-ease;
-  
+
       &:after {
         content: "";
         position: absolute;
@@ -779,7 +790,6 @@ body {
 
 input {
   .div {
-
   }
 }
 
@@ -809,11 +819,11 @@ input {
 }
 
 .application__inputs:focus:required:invalid {
-  border-bottom: 1px solid red!important;
+  border-bottom: 1px solid red !important;
 }
 
 .application__inputs:required:valid {
-  border-bottom: 1px solid green!important;
+  border-bottom: 1px solid green !important;
 }
 
 .photo-input:focus:required:invalid + label {
@@ -881,7 +891,7 @@ input {
   }
 
   .photo-label-document {
-    font-size: 13.5px!important;
+    font-size: 13.5px !important;
   }
 }
 
@@ -1551,6 +1561,11 @@ input {
   .proposal__item {
     max-width: 474px;
     margin: 0 auto 30px;
+    display: flex;
+    background: #f5fffa;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05),
+      0px 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
   }
 
   .proposal__item:last-child {
@@ -1558,15 +1573,40 @@ input {
   }
 
   .proposal__link {
-    width: 100%;
-    padding: 16px 136px;
+    width: 60%;
+    padding: 16px 36px;
     display: flex;
     justify-content: space-between;
 
-    background: #f5fffa;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.05),
-      0px 4px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 25px;
+    &:hover {
+      background: #e7eeeb;
+      border-radius: 25px 0 0 25px;
+    }
+  }
+
+  .proposal__edit-link {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .proposal__edit-link a {
+    width: 75%;
+    height: 30px;
+    background: #c1c1c1;
+    border-radius: 40px;
+    text-align: center;
+    padding: 5px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #000;
+
+    &:hover {
+      background: #969696;
+    }
   }
 
   .proposal__name {
@@ -1616,7 +1656,7 @@ input {
 // profile.html, profile-edit.html
 
 .profile {
-  box-sizing: border-box!important;
+  box-sizing: border-box !important;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -1692,10 +1732,10 @@ input {
     }
 
     label {
-
       border: 2px solid #bacfc0;
 
-      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25),
+        0px 0px 4px rgba(0, 0, 0, 0.5);
       border-radius: 60.5px;
 
       display: block;
@@ -1816,7 +1856,6 @@ input {
       border-width: thin;
       cursor: pointer;
     }
-
   }
 
   .profile-edit__button {
@@ -1859,7 +1898,6 @@ input {
       background: url(../img/icons/photo-camera-icon.png) 100% 50% no-repeat;
     }
   }
-
 }
 
 // percentage in bottom
@@ -2010,7 +2048,6 @@ input {
     width: 172px;
     margin: 60px 0 90px;
   }
-
 }
 
 // chosen-bank.html
@@ -2268,13 +2305,12 @@ input {
   }
 }
 
-
 // Red border for showing errors
 
 .red-input-border {
-  border-bottom: 1.5px solid red!important;
+  border-bottom: 1.5px solid red !important;
 }
 
 .red-input-border-radius {
-  border: 1.5px solid red!important;
+  border: 1.5px solid red !important;
 }

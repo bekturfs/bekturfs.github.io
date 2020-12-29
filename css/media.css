@@ -574,7 +574,11 @@
     margin-bottom: 40px;
   }
   .proposal .proposal__link {
-    padding: 16px 50px;
+    padding: 16px 20px;
+  }
+  .proposal .proposal__edit-link a {
+    width: 90%;
+    font-size: 14px;
   }
   .profile {
     padding: 0 25px;
