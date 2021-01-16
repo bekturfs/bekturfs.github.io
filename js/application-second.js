@@ -10,7 +10,7 @@ $('#application-own-business').on('click', function(){
     showHideContent(this, 9)
 })
 
-$('#application-estate').on('click', function(){
+$('#application-possessions').on('click', function(){
     showHideContent(this, 4)
 })
 

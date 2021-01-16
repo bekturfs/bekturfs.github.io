@@ -1,3 +1,9 @@
+$primary: #11998e;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+$input-bottom-line: #e0e0e0;
+
 *,
 *:before,
 *after {
@@ -793,11 +799,6 @@ body {
   color: #9da7a1;
 }
 
-input {
-  .div {
-  }
-}
-
 .application__left,
 .application__right {
   width: 45%;
@@ -805,7 +806,7 @@ input {
 
 .application__inputs {
   width: 265px;
-  padding: 16px;
+  padding: 20px 16px 12px;
   border-bottom: 1.5px solid #e0e0e0 !important;
   // margin-bottom: 16px;
 
@@ -823,6 +824,71 @@ input {
   border-bottom: 1px solid#E0E0E0 !important;
 }
 
+.application__inputs3 {
+  position: relative;
+  padding: 16px 0 0 0;
+  width: 265px;
+  font-size: 14px;
+
+  input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $input-bottom-line;
+    outline: 0;
+    font-size: inherit;
+    padding: 7px 16px;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown ~ label {
+      font-size: inherit;
+      cursor: text;
+      top: 20px;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 4px;
+    left: 16px;
+    display: block;
+    transition: 0.2s;
+    font-size: 10px;
+    color: $gray;
+  }
+
+  input:focus {
+    ~ label {
+      position: absolute;
+      top: 4px;
+      display: block;
+      transition: 0.2s;
+      font-size: 10px;
+      color: $primary;
+      font-weight: 400;
+    }
+
+    padding-bottom: 6px;
+    padding-left: 16px;
+    font-weight: 400;
+    border-width: 2px;
+    border-image: linear-gradient(to right, $primary, $secondary);
+    border-image-slice: 1;
+  }
+
+  input {
+    &:required,
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+}
+
 .application__inputs:focus:required:invalid {
   border-bottom: 1px solid red !important;
 }
@@ -835,9 +901,6 @@ input {
   color: red;
 }
 
-.check:checked ~ .div {
-}
-
 .application__costs {
   margin-left: 20px;
 }
@@ -847,8 +910,39 @@ input {
 }
 
 .application__date {
-  margin-bottom: 16px;
   position: relative;
+
+  .select-group {
+    display: flex;
+    justify-content: space-between;
+
+    select {
+      border-radius: 4px;
+      color: rgb(63, 59, 59);
+      border-color: #e0e0e0;
+      font-size: 15px;
+      font-weight: normal;
+      height: 36px;
+      line-height: 20px;
+    }
+
+    select:focus,
+    select:active {
+      border: 2px solid #e0e0e0;
+    }
+
+    select:nth-child(1) {
+      width: 60px;
+    }
+
+    select:nth-child(2) {
+      width: 95px;
+    }
+
+    select:nth-child(3) {
+      width: 70px;
+    }
+  }
 
   input {
     width: 100%;
@@ -973,13 +1067,6 @@ input {
     width: 265px;
     padding-left: 50px;
     box-sizing: border-box;
-
-    input {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      border-bottom: 1px solid #e0e0e0;
-    }
   }
 }
 

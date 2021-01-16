@@ -823,7 +823,7 @@ body {
 
 .application__inputs {
   width: 265px;
-  padding: 16px;
+  padding: 20px 16px 12px;
   border-bottom: 1.5px solid #e0e0e0 !important;
   font-size: inherit;
   font-weight: inherit;
@@ -837,6 +837,86 @@ body {
   padding: 12px;
   margin-top: 8px;
   border-bottom: 1px solid #E0E0E0 !important;
+}
+
+.application__inputs3 {
+  position: relative;
+  padding: 16px 0 0 0;
+  width: 265px;
+  font-size: 14px;
+}
+
+.application__inputs3 input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  outline: 0;
+  font-size: inherit;
+  padding: 7px 16px;
+  background: transparent;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.application__inputs3 input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.application__inputs3 input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.application__inputs3 input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.application__inputs3 input::placeholder {
+  color: transparent;
+}
+
+.application__inputs3 input:placeholder-shown ~ label {
+  font-size: inherit;
+  cursor: text;
+  top: 20px;
+}
+
+.application__inputs3 label {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 10px;
+  color: #9b9b9b;
+}
+
+.application__inputs3 input:focus {
+  padding-bottom: 6px;
+  padding-left: 16px;
+  font-weight: 400;
+  border-width: 2px;
+  -o-border-image: linear-gradient(to right, #11998e, #38ef7d);
+     border-image: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
+     border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+
+.application__inputs3 input:focus ~ label {
+  position: absolute;
+  top: 4px;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 10px;
+  color: #11998e;
+  font-weight: 400;
+}
+
+.application__inputs3 input:required, .application__inputs3 input:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .application__inputs:focus:required:invalid {
@@ -860,8 +940,43 @@ body {
 }
 
 .application__date {
-  margin-bottom: 16px;
   position: relative;
+}
+
+.application__date .select-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.application__date .select-group select {
+  border-radius: 4px;
+  color: #3f3b3b;
+  border-color: #e0e0e0;
+  font-size: 15px;
+  font-weight: normal;
+  height: 36px;
+  line-height: 20px;
+}
+
+.application__date .select-group select:focus,
+.application__date .select-group select:active {
+  border: 2px solid #e0e0e0;
+}
+
+.application__date .select-group select:nth-child(1) {
+  width: 60px;
+}
+
+.application__date .select-group select:nth-child(2) {
+  width: 95px;
+}
+
+.application__date .select-group select:nth-child(3) {
+  width: 70px;
 }
 
 .application__date input {
@@ -992,13 +1107,6 @@ body {
   padding-left: 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-.application__radio-groups .married input {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .application__sms-button {

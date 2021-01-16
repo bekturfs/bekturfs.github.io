@@ -48,57 +48,124 @@
         <div class="application__content">
           <div class="application__flex-container" id="application-first-form">
             <div class="application__left">
-              <input
-                type="text"
-                class="application__inputs application__text-input application__input"
-                placeholder="Фио"
-                required
-              />
-              <div class="application__date application__inputs">
-                <label for="birth-input">Дата рождения</label>
-                <input value="1991-01-01" type="date" id="birth-input" />
+              <div class="application__inputs3">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="Фио"
+                  required
+                  id="name"
+                />
+                <label for="name">Фио</label>
               </div>
-              <input
-                type="text"
-                class="application__inputs application__text-input application__input"
-                placeholder="Место жительства"
-                required
-              />
+              <div class="application__date application__inputs">
+                <label for="issues-date-input">День рождения</label>
+                <div class="select-group">
+                  <select class="date-day" name="dd"></select>
+                  <select
+                    class="date-month"
+                    name="mm"
+                    onchange="change_month(this)"
+                  ></select>
+                  <select
+                    class="date-year"
+                    name="yyyy"
+                    onchange="change_year(this)"
+                  ></select>
+                </div>
+              </div>
+              <div class="application__inputs3">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="Место жительства"
+                  required
+                  id="address"
+                />
+                <label for="address">Место жительства</label>
+              </div>
               <div class="application__photo application__inputs">
-                <input type="file" class="photo-input file-input" id="photo-input1" required/>
-                <label for="photo-input1" class="photo-label"> Добавить фото лица </label>
+                <input
+                  type="file"
+                  class="photo-input file-input"
+                  id="photo-input1"
+                  required
+                />
+                <label for="photo-input1" class="photo-label">
+                  Добавить фото лица
+                </label>
                 <label for="photo-input1" class="photo-camera-label"></label>
               </div>
-              <input
-                type="text"
-                class="application__inputs application__text-input application__input"
-                placeholder="Номер паспорта"
-                required
-              />
-              <input
-                type="text"
-                class="application__inputs application__text-input application__input"
-                placeholder="Кем выдан"
-                required
-              />
+              <div class="application__inputs3">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="Номер паспорта"
+                  required
+                  id="passport-number"
+                />
+                <label for="passport-number">Номер паспорта</label>
+              </div>
+              <div class="application__inputs3">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="Кем выдан"
+                  required
+                  id="issued-by"
+                />
+                <label for="issued-by">Кем выдан</label>
+              </div>
               <div class="application__date application__inputs">
                 <label for="issues-date-input">Дата выдачи</label>
-                <input value="1991-01-01" type="date" id="issues-date-input"/>
+                <div class="select-group">
+                  <select class="date-day" id="day" name="dd"></select>
+                  <select
+                    class="date-month"
+                    name="mm"
+                    onchange="change_month(this)"
+                  ></select>
+                  <select
+                    class="date-year"
+                    name="yyyy"
+                    onchange="change_year(this)"
+                  ></select>
+                </div>
               </div>
-              <input
-                type="text"
-                class="application__inputs application__text-input"
-                placeholder="ИНН"
-                required
-              />
+              <div class="application__inputs3">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="ИНН"
+                  required
+                  id="inn"
+                />
+                <label for="inn">ИНН</label>
+              </div>
               <div class="application__photo application__inputs">
-                <input type="file" class="photo-input file-input" id="photo-input2" required/>
-                <label for="photo-input2" class="photo-label">Прикрепи/сфотай <br> паспорт 1 </label>
+                <input
+                  type="file"
+                  class="photo-input file-input"
+                  id="photo-input2"
+                  required
+                />
+                <label for="photo-input2" class="photo-label"
+                  >Прикрепи/сфотай <br />
+                  паспорт 1
+                </label>
                 <label for="photo-input2" class="photo-camera-label"></label>
               </div>
               <div class="application__photo application__inputs">
-                <input type="file" class="photo-input file-input" id="photo-input3" required/>
-                <label for="photo-input3" class="photo-label">Прикрепи/сфотай <br> паспорт 2 </label>
+                <input
+                  type="file"
+                  class="photo-input file-input"
+                  id="photo-input3"
+                  required
+                />
+                <label for="photo-input3" class="photo-label"
+                  >Прикрепи/сфотай <br />
+                  паспорт 2
+                </label>
                 <label for="photo-input3" class="photo-camera-label"></label>
               </div>
             </div>
@@ -126,8 +193,26 @@
                   <span class="checkmark"></span>
                 </label>
                 <div id="married-content" class="married">
-                  <input type="text" placeholder="ФИО супруг(а)"/>
-                  <input type="text" placeholder="Количество детей" />
+                  <div class="application__inputs3" style="width: 100%">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="ФИО супруг(а)"
+                      required
+                      id="spouse-name"
+                    />
+                    <label for="spouse-name">ФИО супруг(а)</label>
+                  </div>
+                  <div class="application__inputs3" style="width: 100%">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Количество детей"
+                      required
+                      id="children-amount"
+                    />
+                    <label for="children-amount">Количество детей</label>
+                  </div>
                 </div>
                 <label class="container application__inputs"
                   >Разведен(а)
@@ -148,32 +233,49 @@
                   <span class="checkmark"></span>
                 </label>
               </div>
-              <input
-                type="email"
-                class="application__inputs application__text-input application__input"
-                placeholder="Email"
-                required
-              />
-              <input
-                type="tel"
-                class="application__inputs application__text-input application__input"
-                placeholder="Телефон"
-                pattern="[+]{1}[0-9]{12}||[0-9]{10}"
-                required
-              />
+              <div class="application__inputs3">
+                <input
+                  type="email"
+                  class="application__text-input application__input"
+                  placeholder="Email"
+                  required
+                  id="email"
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="application__inputs3">
+                <input
+                  type="tel"
+                  class="application__text-input application__input"
+                  placeholder="+996 (•••) ••••••"
+                  required
+                  id="phone"
+                />
+                <label for="phone">Телефон</label>
+              </div>
               <button class="application__sms-button">
                 Получить СМС - код
               </button>
-              <input
-                type="text"
-                class="application__inputs2 application__sms-confirm-input application__text-input application__input"
-                placeholder="Ввести код с СМС"
-              />
-              <input
-                type="text"
-                class="application__inputs2 application__text-input application__input"
-                placeholder="Создайте пароль"
-              />
+              <div class="application__inputs3" style="margin-top: 15px">
+                <input
+                  type="text"
+                  class="application__text-input application__input"
+                  placeholder="Ввести код с СМС"
+                  required
+                  id="sms"
+                />
+                <label for="sms">Ввести код с СМС</label>
+              </div>
+              <div class="application__inputs3">
+                <input
+                  type="password"
+                  class="application__text-input application__input"
+                  placeholder="Пароль"
+                  required
+                  id="password"
+                />
+                <label for="password">Пароль</label>
+              </div>
             </div>
           </div>
         </div>
@@ -278,7 +380,12 @@
             </li>
           </ul>
         </div>
-        <button id="submit-btn" class="agreement__button" type="submit" disabled>
+        <button
+          id="submit-btn"
+          class="agreement__button"
+          type="submit"
+          disabled
+        >
           <div class="agreement__button-arrow"></div>
           Следующий шаг
         </button>
@@ -316,6 +423,8 @@
     </footer>
     <script src="js/header.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/dist/jquery.inputmask.min.js"></script>
+    <script src="js/dist/custom-date.js"></script>
     <script src="js/application-first.js"></script>
   </body>
 </html>

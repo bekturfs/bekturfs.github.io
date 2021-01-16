@@ -121,30 +121,46 @@
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Наименование организации"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Должность"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Стаж работы"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Адрес работы"
-                    required
-                  />
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Наименование организации"
+                      required
+                      id="naming"
+                    />
+                    <label for="naming">Наименование организации</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Должность"
+                      required
+                      id="position"
+                    />
+                    <label for="position">Должность</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Стаж работы"
+                      required
+                      id="staj"
+                    />
+                    <label for="staj">Стаж работы</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Адрес работы"
+                      required
+                      id="work-adress"
+                    />
+                    <label for="work-adress">Адрес работы</label>
+                  </div>
                   <div class="application__photo application__inputs">
                     <input
                       type="file"
@@ -169,71 +185,99 @@
                 <div class="dropdown-name">
                   <label class="container"
                     >Собственный бизнес
-                    <input
-                      type="checkbox"
-                      checked="checked"
-                      id="application-own-business"
-                    />
+                    <input type="checkbox" id="application-own-business" />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Вид деятельности"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Стаж работы"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Адрес бизнеса"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Месячный доход"
-                    required
-                  />
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Вид деятельности"
+                      required
+                      id="activity-kind"
+                    />
+                    <label for="activity-kind">Вид деятельности</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Стаж работы"
+                      required
+                      id="staj2"
+                    />
+                    <label for="staj2">Стаж работы</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Адрес бизнеса"
+                      required
+                      id="business-adress"
+                    />
+                    <label for="business-adress">Адрес бизнеса</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Месячный доход"
+                      required
+                      id="month-income"
+                    />
+                    <label for="month-income">Месячный доход</label>
+                  </div>
                   <div class="dropdown-name dropdown-name-consumption">
                     Расходы за месяц - <span id="total-sum"></span>
                     <span class="kyrgyz-som">c</span>
                   </div>
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input application__costs"
-                    placeholder="Аренда"
-                    id="application__rent"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input application__costs"
-                    placeholder="Покупка товара / услуги"
-                    id="application__purchase-of-goods"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input application__costs"
-                    placeholder="Заработная плата персонала"
-                    id="application__salary-of-personal"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input application__costs"
-                    placeholder="Ком.услуги"
-                    id="application__com-services"
-                    required
-                  />
+                  <div class="application__inputs3 application__costs">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Аренда"
+                      required
+                      id="application__rent"
+                    />
+                    <label for="application__rent">Аренда</label>
+                  </div>
+                  <div class="application__inputs3 application__costs">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Покупка товара / услуги"
+                      required
+                      id="application__purchase-of-goods"
+                    />
+                    <label for="application__purchase-of-goods"
+                      >Покупка товара / услуги</label
+                    >
+                  </div>
+                  <div class="application__inputs3 application__costs">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Заработная плата персонала"
+                      required
+                      id="application__salary-of-personal"
+                    />
+                    <label for="application__salary-of-personal"
+                      >Заработная плата персонала</label
+                    >
+                  </div>
+                  <div class="application__inputs3 application__costs">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Ком.услуги"
+                      required
+                      id="application__com-services"
+                    />
+                    <label for="application__com-services">Ком.услуги</label>
+                  </div>
                   <div class="application__photo application__inputs">
                     <input
                       type="file"
@@ -250,11 +294,18 @@
                       class="photo-camera-label"
                     ></label>
                   </div>
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input"
-                    placeholder="Какую сумму вы можете оплачивать в месяц (в сомах)"
-                  />
+                  <div class="application__inputs3" style="padding: 30px 0">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Какую сумму вы можете оплачивать в месяц (в сомах)"
+                      required
+                      id="sum-by-month"
+                    />
+                    <label for="sum-by-month"
+                      >Какую сумму вы можете оплачивать в месяц (в сомах)</label
+                    >
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,49 +319,67 @@
           <div class="dropdown-name">
             <label class="container"
               >Lorem
-              <input
-                type="checkbox"
-                checked="checked"
-                id="application-guarantor"
-              />
+              <input type="checkbox" id="application-guarantor" />
               <span class="checkmark"></span>
             </label>
           </div>
           <div class="dropdown-content">
             <div class="application__flex-container">
               <div class="application__left">
-                <input
-                  type="text"
-                  class="application__inputs application__text-input"
-                  placeholder="ФИО поручителя"
-                  required
-                />
-                <input
-                  type="text"
-                  class="application__inputs application__text-input"
-                  placeholder="Кем приходиться"
-                  required
-                />
-                <input
-                  type="text"
-                  class="application__inputs application__text-input"
-                  placeholder="Адрес проживания"
-                  required
-                />
+                <div class="application__inputs3">
+                  <input
+                    type="text"
+                    class="application__text-input application__input"
+                    placeholder="ФИО поручителя"
+                    required
+                    id="guarantor-name"
+                  />
+                  <label for="guarantor-name">ФИО поручителя</label>
+                </div>
+                <div class="application__inputs3">
+                  <input
+                    type="text"
+                    class="application__text-input application__input"
+                    placeholder="Кем приходиться"
+                    required
+                    id="guarantor-status"
+                  />
+                  <label for="guarantor-status">Кем приходиться</label>
+                </div>
+                <div class="application__inputs3">
+                  <input
+                    type="text"
+                    class="application__text-input application__input"
+                    placeholder="Адрес проживания"
+                    required
+                    id="guarantor-address"
+                  />
+                  <label for="guarantor-address">Адрес проживания</label>
+                </div>
               </div>
               <div class="application__right">
-                <input
-                  type="text"
-                  class="application__inputs application__text-input"
-                  placeholder="Вид деятельности"
-                  required
-                />
-                <input
-                  type="number"
-                  class="application__inputs application__text-input"
-                  placeholder="Выручка/зарплата (в сомах)"
-                  required
-                />
+                <div class="application__inputs3">
+                  <input
+                    type="text"
+                    class="application__text-input application__input"
+                    placeholder="Вид деятельности"
+                    required
+                    id="guarantor-job"
+                  />
+                  <label for="guarantor-job">Вид деятельности</label>
+                </div>
+                <div class="application__inputs3">
+                  <input
+                    type="number"
+                    class="application__text-input application__input"
+                    placeholder="Выручка/зарплата (в сомах)"
+                    required
+                    id="guarantor-salary"
+                  />
+                  <label for="guarantor-salary"
+                    >Выручка/зарплата (в сомах)</label
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -327,39 +396,55 @@
                 <div class="dropdown-name">
                   <label class="container"
                     >Недвижимое (дом, квартира, земля)
-                    <input
-                      type="checkbox"
-                      checked="checked"
-                      id="application-estate"
-                    />
+                    <input type="checkbox" id="application-possessions" />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Описание имущества"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Владелец имущества "
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Адрес имущества"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input"
-                    placeholder="Рыночная стоимость (в сомах)"
-                    required
-                  />
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Описание имущества"
+                      required
+                      id="possessions-description"
+                    />
+                    <label for="possessions-description"
+                      >Описание имущества</label
+                    >
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Владелец имущества"
+                      required
+                      id="possessions-owner"
+                    />
+                    <label for="possessions-owner">Владелец имущества</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Адрес имущества"
+                      required
+                      id="possessions-address"
+                    />
+                    <label for="possessions-address">Адрес имущества</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Рыночная стоимость (в сомах)"
+                      required
+                      id="possessions-cost"
+                    />
+                    <label for="possessions-cost"
+                      >Рыночная стоимость (в сомах)</label
+                    >
+                  </div>
                   <div class="application__photo application__inputs">
                     <input
                       type="file"
@@ -384,39 +469,53 @@
                 <div class="dropdown-name">
                   <label class="container"
                     >Движимое (машина, оборудование, товар, бизнес)
-                    <input
-                      type="checkbox"
-                      checked="checked"
-                      id="application-movable"
-                    />
+                    <input type="checkbox" id="application-movable" />
                     <span class="checkmark"></span>
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Описание имущества"
-                    required
-                  />
-                  <input
-                    type="text"
-                    class="application__inputs application__text-input"
-                    placeholder="Владелец имущества"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input"
-                    placeholder="Рыночная стоимость (в сомах)"
-                    required
-                  />
-                  <input
-                    type="number"
-                    class="application__inputs application__text-input"
-                    placeholder="Месячный доход (в сомах)"
-                    required
-                  />
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Описание имущества"
+                      required
+                      id="movable-description"
+                    />
+                    <label for="movable-description">Описание имущества</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="text"
+                      class="application__text-input application__input"
+                      placeholder="Владелец имущества"
+                      required
+                      id="movable-owner"
+                    />
+                    <label for="movable-owner">Владелец имущества</label>
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Рыночная стоимость (в сомах)"
+                      required
+                      id="movable-cost"
+                    />
+                    <label for="movable-cost"
+                      >Рыночная стоимость (в сомах)</label
+                    >
+                  </div>
+                  <div class="application__inputs3">
+                    <input
+                      type="number"
+                      class="application__text-input application__input"
+                      placeholder="Месячный доход (в сомах)"
+                      required
+                      id="movable-income"
+                    />
+                    <label for="movable-income">Месячный доход (в сомах)</label>
+                  </div>
                   <div class="application__photo application__inputs">
                     <input
                       type="file"

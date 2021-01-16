@@ -100,5 +100,7 @@
       $('.application-percentage .line .percent-indicator').text((filledTotal + 2) * 2 + '%');
     }
 
+    // phone number format
+  $("#phone").inputmask({"mask": "+ 999 (999) 999999", "placeholder": "+ 996 (•••) ••••••"});
+
 })()
-     
