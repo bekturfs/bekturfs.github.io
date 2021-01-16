@@ -924,11 +924,13 @@ body {
       font-weight: normal;
       height: 36px;
       line-height: 20px;
+      outline: 0;
     }
 
     select:focus,
     select:active {
-      border: 2px solid #e0e0e0;
+      // border: 2px solid #e0e0e0;
+      outline: 1px solid #e0e0e0;
     }
 
     select:nth-child(1) {
