@@ -433,7 +433,9 @@ body {
   }
 
   .credit__item input:required:valid {
-    border-color: green;
+    border-bottom-width: 2px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
   }
 
   .credit__item label {
@@ -457,6 +459,10 @@ body {
     padding-bottom: 11px;
     border: 0px;
     border-bottom: 2px solid #e0e0e0;
+    // border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-width: "2px";
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
     outline: 0px;
   }
 
@@ -807,7 +813,7 @@ body {
 .application__inputs {
   width: 265px;
   padding: 20px 16px 12px;
-  border-bottom: 1.5px solid #e0e0e0 !important;
+  border-bottom: 1.5px solid #e0e0e0;
   // margin-bottom: 16px;
 
   font-size: inherit;
@@ -824,7 +830,7 @@ body {
   border-bottom: 1px solid#E0E0E0 !important;
 }
 
-.application__inputs3 {
+.material-input {
   position: relative;
   padding: 16px 0 0 0;
   width: 265px;
@@ -912,7 +918,7 @@ body {
 .application__date {
   position: relative;
 
-  .select-group {
+  .date-select-group {
     display: flex;
     justify-content: space-between;
 
@@ -924,7 +930,7 @@ body {
       font-weight: normal;
       height: 36px;
       line-height: 20px;
-      outline: 0;
+      // outline: 0;
     }
 
     select:focus,
@@ -1779,25 +1785,19 @@ body {
     color: inherit;
   }
 
-  input {
-    border: none;
-    background: inherit;
-    outline: none;
+  .profile-input {
+    width: auto;
   }
 
-  input::placeholder {
-    color: #bdbdbd;
-    font-size: 13px;
-  }
+  // input::placeholder {
+  //   color: #bdbdbd;
+  //   font-size: 13px;
+  // }
 
   .profile__content {
     position: relative;
     width: 100%;
     padding: 65px 180px 0;
-  }
-
-  .profile__content-edit {
-    padding-bottom: 60px;
   }
 
   .profile-edit__icon-button {
@@ -1867,7 +1867,7 @@ body {
     display: block;
     margin-bottom: 15px;
     width: 207px;
-    color: #4f4f4f;
+    color: #9b9b9b;
   }
 
   .profile__input {
@@ -1906,7 +1906,7 @@ body {
   .profile__sub-title {
     width: 158px;
     padding: 0;
-    margin: 40px auto;
+    margin: 40px auto 0;
 
     font-weight: 500;
     font-size: 16px;
@@ -1924,31 +1924,20 @@ body {
     justify-content: space-between;
   }
 
+  .profile__passport-edit-row {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .profile__passport-col {
     display: block;
+    flex-basis: 290px;
     max-width: 290px;
+    max-height: 180px;
 
     img {
       width: 100%;
-    }
-  }
-
-  .profile__date {
-    input {
-      width: 100%;
-      padding: 5px;
-      border-bottom: 1px solid #ebebeb;
-    }
-
-    input[type="date"]::-webkit-calendar-picker-indicator {
-      color: rgba(0, 0, 0, 0);
-      opacity: 1;
-      display: block;
-      background: url(../img/icons/calendar-icon.png) no-repeat;
-      width: 20px;
-      height: 20px;
-      border-width: thin;
-      cursor: pointer;
+      object-fit: contain;
     }
   }
 
@@ -2077,26 +2066,17 @@ body {
     border-radius: 25px;
   }
 
-  input {
+  .login-input {
+    width: 200px;
     display: block;
     margin: 0 auto 20px;
-    padding: 10px;
-    border: 0;
-    background: inherit;
-    border-bottom: 1px solid #ebebeb;
-
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #bdbdbd;
   }
 
-  input::-webkit-input-placeholder {
-    font-size: inherit;
-    font-weight: inherit;
-    color: inherit;
-  }
+  // input::-webkit-input-placeholder {
+  //   font-size: inherit;
+  //   font-weight: inherit;
+  //   color: inherit;
+  // }
 
   .login-or-email {
     width: 185px;
@@ -2308,7 +2288,7 @@ body {
   .support__select {
     appearance: none;
     outline: none;
-    border: none;
+    border: 1px solid green;
     background: url(../img/icons/arrow-down-sign-to-navigate-icon.png) 95% 50%
       no-repeat;
     background-size: 16px 16px;
@@ -2407,4 +2387,12 @@ body {
 
 .red-input-border-radius {
   border: 1.5px solid red !important;
+}
+
+.validation-error {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f13333;
+  border-radius: 5px;
+  color: #fff;
 }

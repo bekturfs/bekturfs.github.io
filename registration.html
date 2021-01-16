@@ -24,7 +24,9 @@
               <a class="nav-link" href="#">Как это работает</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-            <li class="nav-item nav-item-documents"><a class="nav-link" href="#">Документы</a></li>
+            <li class="nav-item nav-item-documents">
+              <a class="nav-link" href="#">Документы</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Вход/Регистрация</a>
@@ -35,75 +37,182 @@
       </div>
     </header>
     <section class="profile registration">
-        <h1 class="profile__title">
-            Регистрация
-        </h1>
-        <h2 class="profile__title2">
-            Личные данные
-        </h2>
+      <h1 class="profile__title">Регистрация</h1>
+      <h2 class="profile__title2">Личные данные</h2>
       <form action="index.php" class="profile-edit__form" method="POST">
         <div class="white-container-big mb-0 mt-0">
-          <div class="profile__content profile__content-edit">
+          <div class="profile__content">
             <div class="profile__img">
-              <input id="profile-photo" accept="image/*" type="file" required>
+              <input id="profile-photo" accept="image/*" type="file" required />
               <label for="profile-photo"></label>
-              <img src="img/icons/photo-plus-icon.png" id="profile__upload-img" alt="Фото профиля">
+              <img
+                src="img/icons/photo-plus-icon.png"
+                id="profile__upload-img"
+                alt="Фото профиля"
+              />
             </div>
             <div class="profile__row">
               <div class="profile__col profile__name">
-                <label for="lastname">Фамилия</label>
-                <input type="text" id="lastname" class="profile__input" placeholder="Doe" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="text"
+                    class="text-input application__input"
+                    placeholder="Фамилия"
+                    required
+                    id="lastname"
+                  />
+                  <label for="lastname">Фамилия</label>
+                </div>
               </div>
               <div class="profile__date profile__col">
-                <label for="birth-date">Дата рождения</label>
-                <input value="1991-01-01" type="date" id="birth-date" class="profile__date-input" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="text"
+                    class="text-input application__input"
+                    placeholder="Имя"
+                    required
+                    id="firstname"
+                  />
+                  <label for="firstname">Имя</label>
+                </div>
               </div>
             </div>
             <div class="profile__row">
               <div class="profile__col profile__name">
-                <label for="firstname">Имя</label>
-                <input type="text" id="firstname" class="profile__input" placeholder="John" required/>
+                <div class="material-input profile-input">
+                  <input
+                    type="text"
+                    class="text-input application__input"
+                    placeholder="Отчество"
+                    required
+                    id="patronymic"
+                  />
+                  <label for="patronymic">Отчество</label>
+                </div>
               </div>
-              <div class="profile__col profile__name">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="profile__input" placeholder="johndoe@mail.com" required/>
+              <div class="profile__col profile__name"></div>
+            </div>
+            <div class="profile__row">
+              <div
+                class="application__date application__inputs validate"
+                style="width: 300px"
+              >
+                <label style="font-size: 14px; color: #9b9b9b"
+                  >Дата рождения</label
+                >
+                <div class="date-select-group">
+                  <select class="date-day" name="dd"></select>
+                  <select
+                    class="date-month"
+                    name="mm"
+                    onchange="change_month(this)"
+                  ></select>
+                  <select
+                    class="date-year"
+                    name="yyyy"
+                    onchange="change_year(this)"
+                  ></select>
+                </div>
+              </div>
+            </div>
+            <div class="profile__row" style="margin-top: 15px">
+              <div class="profile__col">
+                <div class="material-input validate profile-input">
+                  <input
+                    type="tel"
+                    class="text-input application__input"
+                    placeholder="+996 (•••) ••••••"
+                    required
+                    id="phone"
+                  />
+                  <label for="phone">Номер телефона</label>
+                </div>
+              </div>
+              <div class="profile__col">
+                <div class="material-input validate profile-input">
+                  <input
+                    type="email"
+                    class="text-input application__input"
+                    placeholder="Email"
+                    required
+                    id="email"
+                  />
+                  <label for="email">Email</label>
+                </div>
               </div>
             </div>
             <div class="profile__row">
               <div class="profile__col profile__name">
-                <label for="patronymic">Отчество</label>
-                <input type="text" id="patronymic" class="profile__input" placeholder="Отчество" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="password"
+                    class="text-input application__input"
+                    placeholder="Пароль"
+                    required
+                    id="password1"
+                  />
+                  <label for="password1">Пароль</label>
+                </div>
               </div>
               <div class="profile__col profile__name">
-                <label for="number-of-phone">Номер телефона</label>
-                <input type="tel" id="number-of-phone" class="profile__input" pattern="[+]{1}[0-9]{12}||[0-9]{10}" placeholder="+996 *** ******" required/>
-              </div>
-            </div>
-            <div class="profile__row">
-              <div class="profile__col profile__name">
-                <label for="password1">Пароль</label>
-                <input type="text" id="password1" class="profile__input" placeholder="******" required/>
-              </div>
-              <div class="profile__col profile__name">
-                <label for="password2">Потверждение пароля</label>
-                <input type="text" id="password2" class="profile__input" placeholder="******" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="password"
+                    class="text-input application__input"
+                    placeholder="Потверждение пароля"
+                    required
+                    id="password2"
+                  />
+                  <label for="password2">Потверждение пароля</label>
+                </div>
               </div>
             </div>
             <h2 class="profile__sub-title">Паспортные данные</h2>
             <div class="profile__row">
               <div class="profile__col profile__name">
-                <label for="seria-of-passport">Серия паспорта</label>
-                <input type="text" id="seria-of-passport" class="profile__input" placeholder="серия паспорта" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="text"
+                    class="text-input application__input"
+                    placeholder="Серия паспорта"
+                    required
+                    id="passport-seria"
+                  />
+                  <label for="passport-seria">Серия паспорта</label>
+                </div>
               </div>
               <div class="profile__col profile__name">
-                <label for="issued-by">Кем выдан</label>
-                <input type="text" id="issued-by" class="profile__input" placeholder="кем выдан" required/>
+                <div class="material-input validate profile-input">
+                  <input
+                    type="text"
+                    class="text-input application__input"
+                    placeholder="Кем выдан"
+                    required
+                    id="issued-by"
+                  />
+                  <label for="issued-by">Кем выдан</label>
+                </div>
               </div>
             </div>
             <div class="profile__row">
-              <div class="profile__date profile__col">
-                <label for="birth-date">Когда выдан</label>
-                <input value="2010-01-01" type="date" id="birth-date" required/>
+              <div
+                class="application__date application__inputs validate"
+                style="width: 300px"
+              >
+                <label>Когда выдан</label>
+                <div class="date-select-group">
+                  <select class="date-day" name="dd"></select>
+                  <select
+                    class="date-month"
+                    name="mm"
+                    onchange="change_month(this)"
+                  ></select>
+                  <select
+                    class="date-year"
+                    name="yyyy"
+                    onchange="change_year(this)"
+                  ></select>
+                </div>
               </div>
               <div class="profile__col border-none"></div>
             </div>
@@ -112,23 +221,51 @@
             </h3>
             <div class="profile__row">
               <div class="profile__col">
-                <div class="profile__passport-photo-inputs">
-                  <input type="file" id="photo-input1" class="photo-input" required/>
-                  <label for="photo-input1" class="photo-label">Фото паспорта</label>
+                <div class="profile__passport-photo-inputs validate">
+                  <input
+                    type="file"
+                    id="photo-input1"
+                    class="photo-input"
+                    accept="image/*"
+                    required
+                  />
+                  <label for="photo-input1" class="photo-label"
+                    >Фото паспорта</label
+                  >
                   <label for="photo-input1" class="photo-camera-label"></label>
                 </div>
               </div>
               <div class="profile__col">
-                <div class="profile__passport-photo-inputs">
-                  <input type="file" id="photo-input2" class="photo-input" required/>
-                  <label for="photo-input2" class="photo-label">Фото паспорта</label>
+                <div class="profile__passport-photo-inputs validate">
+                  <input
+                    type="file"
+                    id="photo-input2"
+                    class="photo-input"
+                    accept="image/*"
+                    required
+                  />
+                  <label for="photo-input2" class="photo-label"
+                    >Фото паспорта</label
+                  >
                   <label for="photo-input2" class="photo-camera-label"></label>
                 </div>
               </div>
             </div>
           </div>
+          <div class="profile__passport-content">
+            <div class="profile__passport-edit-row">
+              <div class="profile__passport-col">
+                <img src="" alt="" id="photo-place1" style="display: none" />
+              </div>
+              <div class="profile__passport-col">
+                <img src="" alt="" id="photo-place2" style="display: none" />
+              </div>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="red-btn profile-edit__button">Зарегистрироваться</button>
+        <button type="submit" class="red-btn profile-edit__button">
+          Изменить
+        </button>
       </form>
     </section>
     <footer class="main-footer">
@@ -157,6 +294,9 @@
     </footer>
     <script src="js/header.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/dist/jquery.inputmask.min.js"></script>
+    <script src="js/dist/custom-date.js"></script>
     <script src="js/registration.js"></script>
+    <script src="js/dist/validation.js"></script>
   </body>
 </html>

@@ -40,21 +40,31 @@
       <form action="">
         <h1 class="login__title">Войти</h1>
         <div class="login__container">
-          <input
-            type="text"
-            class="login-or-email"
-            placeholder="Введите логин или Email"
-          />
-          <input
-            type="password"
-            class="password"
-            placeholder="Введите пароль"
-          />
+          <div class="material-input login-input">
+            <input
+              type="text"
+              class="text-input application__input"
+              placeholder="Логин"
+              required
+              id="login-email"
+            />
+            <label for="login-email">Введите логин или Email</label>
+          </div>
+          <div class="material-input login-input">
+            <input
+              type="text"
+              class="text-input application__input"
+              placeholder="Пароль"
+              required
+              id="password"
+            />
+            <label for="password">Пароль</label>
+          </div>
           <a href="#" class="forgot__password">(Забыли пароль?)</a>
         </div>
         <div class="login__buttons">
           <button class="red-btn login-btn">Войти</button>
-          <button class="blue-btn login-btn">Регистрация</button>
+          <a class="blue-btn login-btn">Регистрация</a>
         </div>
       </form>
     </section>

@@ -55,7 +55,10 @@ function showHideContent(context, inputsCount){
 
 $('.file-input').on('change', function () { 
     var name = this.files[0].name;
-    $(this).parent().find('.photo-label').text(name);
+      if (name.length > 20){
+        name = name.slice(0, 20) + ' ...';
+      }
+      $(this).parent().find('.photo-label').text(name).css({'color': '#000'});
    })
 
 var startPercent = 40;
@@ -64,11 +67,11 @@ $('.application-percentage .line .filled-line').css('width', startPercent + '%' 
 $('.application-percentage .line .percent-indicator').css('left', (startPercent - 2) + '%' );
 $('.application-percentage .line .percent-indicator').text(startPercent + '%');
 
-$('.application__text-input').on('input', countPersentage)
+$('.material-input .text-input').on('input', countPersentage)
 
 function countPersentage() {
 
-    var inputs = document.querySelectorAll('.application__text-input');
+    var inputs = document.querySelectorAll('.material-input .text-input');
 
     // Get the number of the found inputs.
     var totalInputs = inputs.length;

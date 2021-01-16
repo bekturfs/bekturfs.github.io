@@ -34,7 +34,10 @@
 
     $('.file-input').on('change', function () { 
       var name = this.files[0].name;
-      $(this).parent().find('.photo-label').text(name);
+      if (name.length > 20){
+        name = name.slice(0, 20) + ' ...';
+      }
+      $(this).parent().find('.photo-label').text(name).css({'color': '#000'});
      })
 
 
@@ -50,7 +53,7 @@
       var div = document.querySelector(".application1");
 
       // Get all the input fields inside your div
-      var inputs = div.querySelectorAll('.application__text-input');
+      var inputs = div.querySelectorAll('.material-input .text-input');
 
       var checkboxInputs = document.querySelectorAll('.application__checkbox-input');
 

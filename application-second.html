@@ -40,7 +40,7 @@
         </nav>
       </div>
     </header>
-    <form action="index.php" method="GET">
+    <form action="index.php" method="GET" autocomplete="off">
       <h1 class="application__title">Заполните заявку</h1>
       <section class="credit">
         <div class="main-container">
@@ -121,51 +121,52 @@
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <div class="application__inputs3">
+                  <div class="material-input validate validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Наименование организации"
                       required
                       id="naming"
                     />
                     <label for="naming">Наименование организации</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Должность"
                       required
                       id="position"
                     />
                     <label for="position">Должность</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Стаж работы"
                       required
                       id="staj"
                     />
                     <label for="staj">Стаж работы</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Адрес работы"
                       required
                       id="work-adress"
                     />
                     <label for="work-adress">Адрес работы</label>
                   </div>
-                  <div class="application__photo application__inputs">
+                  <div class="application__photo validate application__inputs">
                     <input
                       type="file"
                       class="photo-input file-input"
                       id="photo-input1"
+                      accept="image/*"
                       required
                     />
                     <label for="photo-input1" class="photo-label"
@@ -190,40 +191,40 @@
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Вид деятельности"
                       required
                       id="activity-kind"
                     />
                     <label for="activity-kind">Вид деятельности</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Стаж работы"
                       required
                       id="staj2"
                     />
                     <label for="staj2">Стаж работы</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Адрес бизнеса"
                       required
                       id="business-adress"
                     />
                     <label for="business-adress">Адрес бизнеса</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Месячный доход"
                       required
                       id="month-income"
@@ -234,20 +235,20 @@
                     Расходы за месяц - <span id="total-sum"></span>
                     <span class="kyrgyz-som">c</span>
                   </div>
-                  <div class="application__inputs3 application__costs">
+                  <div class="material-input validate application__costs">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Аренда"
                       required
                       id="application__rent"
                     />
                     <label for="application__rent">Аренда</label>
                   </div>
-                  <div class="application__inputs3 application__costs">
+                  <div class="material-input validate application__costs">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Покупка товара / услуги"
                       required
                       id="application__purchase-of-goods"
@@ -256,10 +257,10 @@
                       >Покупка товара / услуги</label
                     >
                   </div>
-                  <div class="application__inputs3 application__costs">
+                  <div class="material-input validate application__costs">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Заработная плата персонала"
                       required
                       id="application__salary-of-personal"
@@ -268,21 +269,22 @@
                       >Заработная плата персонала</label
                     >
                   </div>
-                  <div class="application__inputs3 application__costs">
+                  <div class="material-input validate application__costs">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Ком.услуги"
                       required
                       id="application__com-services"
                     />
                     <label for="application__com-services">Ком.услуги</label>
                   </div>
-                  <div class="application__photo application__inputs">
+                  <div class="application__photo validate application__inputs">
                     <input
                       type="file"
                       class="photo-input file-input"
                       id="photo-input2"
+                      accept="image/*"
                       required
                     />
                     <label for="photo-input2" class="photo-label"
@@ -294,10 +296,10 @@
                       class="photo-camera-label"
                     ></label>
                   </div>
-                  <div class="application__inputs3" style="padding: 30px 0">
+                  <div class="material-input validate" style="padding: 30px 0">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Какую сумму вы можете оплачивать в месяц (в сомах)"
                       required
                       id="sum-by-month"
@@ -326,30 +328,30 @@
           <div class="dropdown-content">
             <div class="application__flex-container">
               <div class="application__left">
-                <div class="application__inputs3">
+                <div class="material-input validate">
                   <input
                     type="text"
-                    class="application__text-input application__input"
+                    class="text-input application__input"
                     placeholder="ФИО поручителя"
                     required
                     id="guarantor-name"
                   />
                   <label for="guarantor-name">ФИО поручителя</label>
                 </div>
-                <div class="application__inputs3">
+                <div class="material-input validate">
                   <input
                     type="text"
-                    class="application__text-input application__input"
+                    class="text-input application__input"
                     placeholder="Кем приходиться"
                     required
                     id="guarantor-status"
                   />
                   <label for="guarantor-status">Кем приходиться</label>
                 </div>
-                <div class="application__inputs3">
+                <div class="material-input validate">
                   <input
                     type="text"
-                    class="application__text-input application__input"
+                    class="text-input application__input"
                     placeholder="Адрес проживания"
                     required
                     id="guarantor-address"
@@ -358,20 +360,20 @@
                 </div>
               </div>
               <div class="application__right">
-                <div class="application__inputs3">
+                <div class="material-input validate">
                   <input
                     type="text"
-                    class="application__text-input application__input"
+                    class="text-input application__input"
                     placeholder="Вид деятельности"
                     required
                     id="guarantor-job"
                   />
                   <label for="guarantor-job">Вид деятельности</label>
                 </div>
-                <div class="application__inputs3">
+                <div class="material-input validate">
                   <input
                     type="number"
-                    class="application__text-input application__input"
+                    class="text-input application__input"
                     placeholder="Выручка/зарплата (в сомах)"
                     required
                     id="guarantor-salary"
@@ -401,10 +403,10 @@
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Описание имущества"
                       required
                       id="possessions-description"
@@ -413,30 +415,30 @@
                       >Описание имущества</label
                     >
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Владелец имущества"
                       required
                       id="possessions-owner"
                     />
                     <label for="possessions-owner">Владелец имущества</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Адрес имущества"
                       required
                       id="possessions-address"
                     />
                     <label for="possessions-address">Адрес имущества</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Рыночная стоимость (в сомах)"
                       required
                       id="possessions-cost"
@@ -445,11 +447,12 @@
                       >Рыночная стоимость (в сомах)</label
                     >
                   </div>
-                  <div class="application__photo application__inputs">
+                  <div class="application__photo validate application__inputs">
                     <input
                       type="file"
                       class="photo-input file-input"
                       id="photo-input3"
+                      accept="image/*"
                       required
                     />
                     <label for="photo-input3" class="photo-label"
@@ -474,30 +477,30 @@
                   </label>
                 </div>
                 <div class="dropdown-content">
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Описание имущества"
                       required
                       id="movable-description"
                     />
                     <label for="movable-description">Описание имущества</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Владелец имущества"
                       required
                       id="movable-owner"
                     />
                     <label for="movable-owner">Владелец имущества</label>
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Рыночная стоимость (в сомах)"
                       required
                       id="movable-cost"
@@ -506,21 +509,22 @@
                       >Рыночная стоимость (в сомах)</label
                     >
                   </div>
-                  <div class="application__inputs3">
+                  <div class="material-input validate">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Месячный доход (в сомах)"
                       required
                       id="movable-income"
                     />
                     <label for="movable-income">Месячный доход (в сомах)</label>
                   </div>
-                  <div class="application__photo application__inputs">
+                  <div class="application__photo validate application__inputs">
                     <input
                       type="file"
                       class="photo-input file-input"
                       id="photo-input4"
+                      accept="image/*"
                       required
                     />
                     <label for="photo-input4" class="photo-label"
@@ -575,5 +579,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/credit.js"></script>
     <script src="js/application-second.js"></script>
+    <script src="js/dist/validation.js"></script>
   </body>
 </html>

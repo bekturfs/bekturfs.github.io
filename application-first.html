@@ -40,7 +40,12 @@
         </nav>
       </div>
     </header>
-    <form action="index.php" method="POST" enctype="multipart/form-data">
+    <form
+      action="index.php"
+      method="POST"
+      enctype="multipart/form-data"
+      autocomplete="off"
+    >
       <section class="application application1">
         <h1 class="application__title">Заполните заявку</h1>
         <h2 class="application__sub-title1">1 Шаг</h2>
@@ -48,19 +53,19 @@
         <div class="application__content">
           <div class="application__flex-container" id="application-first-form">
             <div class="application__left">
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Фио"
                   required
                   id="name"
                 />
                 <label for="name">Фио</label>
               </div>
-              <div class="application__date application__inputs">
-                <label for="issues-date-input">День рождения</label>
-                <div class="select-group">
+              <div class="application__date application__inputs validate">
+                <label>День рождения</label>
+                <div class="date-select-group">
                   <select class="date-day" name="dd"></select>
                   <select
                     class="date-month"
@@ -74,21 +79,22 @@
                   ></select>
                 </div>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Место жительства"
                   required
                   id="address"
                 />
                 <label for="address">Место жительства</label>
               </div>
-              <div class="application__photo application__inputs">
+              <div class="application__photo validate application__inputs">
                 <input
                   type="file"
                   class="photo-input file-input"
                   id="photo-input1"
+                  accept="image/*"
                   required
                 />
                 <label for="photo-input1" class="photo-label">
@@ -96,20 +102,20 @@
                 </label>
                 <label for="photo-input1" class="photo-camera-label"></label>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Номер паспорта"
                   required
                   id="passport-number"
                 />
                 <label for="passport-number">Номер паспорта</label>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Кем выдан"
                   required
                   id="issued-by"
@@ -117,8 +123,8 @@
                 <label for="issued-by">Кем выдан</label>
               </div>
               <div class="application__date application__inputs">
-                <label for="issues-date-input">Дата выдачи</label>
-                <div class="select-group">
+                <label>Дата выдачи</label>
+                <div class="date-select-group">
                   <select class="date-day" id="day" name="dd"></select>
                   <select
                     class="date-month"
@@ -132,10 +138,10 @@
                   ></select>
                 </div>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="ИНН"
                   required
                   id="inn"
@@ -147,6 +153,7 @@
                   type="file"
                   class="photo-input file-input"
                   id="photo-input2"
+                  accept="image/*"
                   required
                 />
                 <label for="photo-input2" class="photo-label"
@@ -160,6 +167,7 @@
                   type="file"
                   class="photo-input file-input"
                   id="photo-input3"
+                  accept="image/*"
                   required
                 />
                 <label for="photo-input3" class="photo-label"
@@ -193,20 +201,20 @@
                   <span class="checkmark"></span>
                 </label>
                 <div id="married-content" class="married">
-                  <div class="application__inputs3" style="width: 100%">
+                  <div class="material-input validate" style="width: 100%">
                     <input
                       type="text"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="ФИО супруг(а)"
                       required
                       id="spouse-name"
                     />
                     <label for="spouse-name">ФИО супруг(а)</label>
                   </div>
-                  <div class="application__inputs3" style="width: 100%">
+                  <div class="material-input validate" style="width: 100%">
                     <input
                       type="number"
-                      class="application__text-input application__input"
+                      class="text-input application__input"
                       placeholder="Количество детей"
                       required
                       id="children-amount"
@@ -233,20 +241,20 @@
                   <span class="checkmark"></span>
                 </label>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="email"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Email"
                   required
                   id="email"
                 />
                 <label for="email">Email</label>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="tel"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="+996 (•••) ••••••"
                   required
                   id="phone"
@@ -256,20 +264,20 @@
               <button class="application__sms-button">
                 Получить СМС - код
               </button>
-              <div class="application__inputs3" style="margin-top: 15px">
+              <div class="material-input validate" style="margin-top: 15px">
                 <input
                   type="text"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Ввести код с СМС"
                   required
                   id="sms"
                 />
                 <label for="sms">Ввести код с СМС</label>
               </div>
-              <div class="application__inputs3">
+              <div class="material-input validate">
                 <input
                   type="password"
-                  class="application__text-input application__input"
+                  class="text-input application__input"
                   placeholder="Пароль"
                   required
                   id="password"
@@ -426,5 +434,6 @@
     <script src="js/dist/jquery.inputmask.min.js"></script>
     <script src="js/dist/custom-date.js"></script>
     <script src="js/application-first.js"></script>
+    <script src="js/dist/validation.js"></script>
   </body>
 </html>

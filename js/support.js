@@ -1,3 +1,4 @@
+
 $('.photo-input').on('change', function(){
 
     var parent = $(this).closest('.photo-item');
