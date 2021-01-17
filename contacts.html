@@ -24,7 +24,9 @@
               <a class="nav-link" href="#">Как это работает</a>
             </li>
             <li class="nav-item"><a class="nav-link" href="#">Партнерам</a></li>
-            <li class="nav-item nav-item-documents"><a class="nav-link" href="#">Документы</a></li>
+            <li class="nav-item nav-item-documents">
+              <a class="nav-link" href="#">Документы</a>
+            </li>
             <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#">Вход/Регистрация</a>
@@ -84,18 +86,26 @@
                     required
                   />
                   <input
-                    type="text"
+                    id="tel"
+                    type="tel"
                     class="contacts__phone-number-input flex-basis-50"
                     placeholder="Номер телефона"
-                    pattern="[+]{1}[0-9]{12}||[0-9]{10}" required
+                    pattern="[+]{1}[0-9() ]{17}||[0-9]{10}"
+                    required
                   />
                 </div>
               </div>
               <div class="contacts__second-half">
-                  <textarea name="" id="" cols="30" rows="10" class="contacts__textarea"></textarea>
-                  <button class="contacts__button red-btn" type="submit">
-                    Отправить
-                  </button>
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="contacts__textarea"
+                ></textarea>
+                <button class="contacts__button red-btn" type="submit">
+                  Отправить
+                </button>
               </div>
             </div>
           </form>
@@ -127,5 +137,8 @@
       </div>
     </footer>
     <script src="js/header.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dist/jquery.inputmask.min.js"></script>
+    <script src="js/contacts.js"></script>
   </body>
 </html>

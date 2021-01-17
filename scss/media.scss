@@ -116,6 +116,15 @@
     margin: 40px auto 50px;
   }
 
+  .material-input {
+    .popup-text {
+      width: 100%;
+      left: 0;
+      top: unset;
+      bottom: 100%;
+    }
+  }
+
   .main-header {
     .site-navigation {
       display: flex;
@@ -141,25 +150,27 @@
       justify-content: start;
       position: absolute;
       top: 60px;
-      left: -260px;
-      width: 260px;
+      left: -90vw;
+      width: 90vw;
       height: 100vh;
       background: #000;
       background: url(../img/main-bg.jpg) 0 0 no-repeat;
       background-size: cover;
       z-index: 20;
-      transition: all 0.1s ease-in;
+      transition: all 0.25s ease-in;
       border-radius: 20px;
 
       font-weight: bold;
       font-size: 16px;
       line-height: 19px;
+      opacity: 0;
 
       color: #4f4f4f;
     }
 
     .nav-list-active {
       left: 0;
+      opacity: 1;
     }
 
     .nav-item {
@@ -318,6 +329,10 @@
   .bank-offers {
     margin: 40px auto 0;
 
+    .bank-offers__title {
+      font-size: 22px;
+    }
+
     .bank-offers__content {
       padding: 32px 20px;
       margin: 30px auto 0;
@@ -364,6 +379,10 @@
     margin-top: 10px;
   }
 
+  .application__date {
+    width: 100% !important;
+  }
+
   .about {
     .about__content {
       margin-top: 40px;
@@ -373,6 +392,7 @@
 
     .about__title {
       margin: 0;
+      font-size: 22px;
     }
 
     .about__video .main-video__content {
@@ -462,6 +482,10 @@
   .profile {
     padding: 0 25px;
 
+    .profile__sub-title {
+      margin-bottom: 10px;
+    }
+
     .profile__content {
       padding: 65px 50px 30px;
     }
@@ -477,6 +501,10 @@
 
     .profile-edit__icon-button {
       right: 20px;
+    }
+
+    .profile__passport-content {
+      padding: 2px 10px;
     }
   }
 

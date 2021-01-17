@@ -46,6 +46,36 @@ $(document).ready(function(){
         }
     }
 
+    function validateInput(context){
+        var value = $(context).val();
+        var validationError = $(context).siblings('.validation-error')
+
+        if (value  === ''){
+
+            if (validationError){
+                $(validationError).remove()
+            }
+
+            var div = document.createElement('div');
+            div.classList.add('validation-error');
+            div.textContent = 'Это поле является обязательным к заполнению'
+
+            $(context).parent().append(div);
+            $(context).css({
+                'border-image': 'none',
+                'border-width': '2px',
+                'border-color': 'red'
+            });
+        } else {
+            validationError.remove();
+            $(context).css({
+                'border-width': '2px',
+                'border-image': 'linear-gradient(to right, #11998e, #38ef7d)',
+                'border-image-slice': '1'
+            });
+        }
+    }
+
     function validateDate(context){
         var parent = $(context).closest('.validate');
         var dayValue = parent.find('select.date-day').val();
