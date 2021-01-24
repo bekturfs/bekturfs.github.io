@@ -103,12 +103,8 @@
       $('.application-percentage .line .percent-indicator').text((filledTotal + 2) * 2 + '%');
     }
 
-    // phone number format
-  $("#phone").inputmask({"mask": "+ 999 (999) 999999", "placeholder": "+ 996 (•••) ••••••"});
-  $("#phone").focus(function () {
-    if ($(this).val() === '+ 996 (•••) ••••••' || $(this).val() === ''){
-        $(this).val("+996");
-    }
-  });
+  $.mask.definitions['#'] = $.mask.definitions['9']; // Set # to do what 9 does
+  $.mask.definitions['9'] = null;                    // Remove 9 as a masking character
+  $('#phone').mask("+996 (###) ##-##-##");               
 
 })()
